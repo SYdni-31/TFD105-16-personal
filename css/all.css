@@ -1,0 +1,315 @@
+@import url("reset.css");
+html{
+    font-family: 'Roboto','Noto Sans TC', sans-serif;
+}
+body{
+    color:#cacaca;
+    background-color:#1D1D1D;
+}
+/* ==========頂端nav======== */
+.head{
+    background-color: rgba(255, 255, 255, 0);
+    display:flex;
+    height: 50px;
+    width: 100%;
+    float:left;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.head img{
+    height: 30px;
+    margin-top:10px;
+}
+.toplogo{
+    margin-left: 8vw;
+}
+.head > a:last-child{
+    margin-right: 8vw;
+    margin-top: 10px;
+    color:#cacaca;
+    font-size: 30px;
+    transition:.5s;
+}
+.head > a:last-child:hover{
+    color:#B69452;
+}
+.mainlist{
+    display:flex;
+    margin-left:auto;
+    width:37.5vw;
+}
+.mainlist li{
+    flex-grow:1;
+    margin-top: 20px;
+    position: relative; 
+}
+.mainlist a{
+    color: #cacaca;
+    text-decoration: none;
+    font-size: 1.2vw;;
+    font-weight: bold;
+    display: block;
+    height: 100%;
+    transition:.5s;
+    text-align: center;
+}
+/* ========nav選單hover======== */
+.mainlist li::before{
+    content: "";
+    position: absolute;
+    top:20px;
+    left:15px;
+    width:0;
+    border-bottom:2px solid #B69452;
+    transition:all .5s; 
+}
+.mainlist a:hover{
+    color: #B69452;
+}
+.mainlist li:hover::before{
+    width:70%;
+}
+/* ========滾動nav透明度======== */
+.nav-colored{
+    background-color: #141414;
+}
+/* ========user&faqtop======== */
+.userfaqtop{
+    background-image: url(../img/usersentertop.png);
+    width: 100%;
+    height: 200px;
+    background-size: 100%;
+}
+/* ========進一步選購======== */
+.gotoshop{
+    margin:0 auto;
+    margin-top:100px;
+    width: 80vw;
+}
+.gotoshop h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+.toshopmaindiv{
+    overflow: hidden;
+    white-space: nowrap;
+}
+.gotoshop ul{
+    font-size: 0;
+}
+.gotoshop li{
+    width: 315px;
+    height: 360px;
+    display:inline-block;
+    background-size: cover;
+    margin-left: 30px;
+}
+.gotoshop a{
+    color: #141414;
+    text-decoration: none;
+}
+.gotoshop1{
+    background-image: url(../img/gotoshop1.png);
+    position: relative;
+}
+.gotoshop2{
+    background-image: url(../img/gotoshop2.png);
+    position: relative;
+}
+.gotoshop3{
+    background-image: url(../img/gotoshop3.png);
+    position: relative;
+}
+.gotoshop4{
+    background-image: url(../img/gotoshop4.png);
+    position: relative;
+}
+.gotoshop li div{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 280px;
+    height:320px;
+    padding:0 30px;
+    padding-top: 60px;
+    box-sizing: border-box;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right:0;
+    margin:auto ;
+    display: none;
+}
+.gotoshop h3{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom:30px;
+}
+.gotoshop p{
+    font-size: 12px;
+    line-height: 1.2;
+    display: block;
+    padding-left: 20px;
+}
+.gotoshop p:last-child{
+    margin-top: 60px;
+    text-align:right;
+    font-weight: bold;
+}
+/* ========進一步選購圖片的hover======== */
+.gotoshop ul li:hover div{
+    display:block;
+    animation:shophover 1s forwards ;
+}
+@keyframes shophover{
+    0%{
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+/* ========選購箭頭======== */
+.gotoshoparr{
+    margin:0 auto;
+    margin-top: 40px;
+    display: block;
+    width: 360px;
+    text-align: justify;
+}
+.gotoshoparr:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+.btntoright, .btntoleft{
+    display: inline-block;
+    margin:0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background-color:#1d1d1d00;
+}
+/* ========箭頭抖動======== */
+.btntoright:hover img{
+    animation: arrright 1s linear infinite;
+}
+@keyframes arrright{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+.btntoleft:hover img{
+    animation: arrleft 1s linear infinite;
+}
+@keyframes arrleft{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+/* ========底端footer======== */
+.bottom{
+    margin-top:60px;
+    background-color: #141414;
+    padding-top: 10px;
+}
+.bottom h2{
+    font-size: 3vw;
+    text-align: center;
+    margin:20px auto;
+}
+.bottom ul{
+    display:flex;
+    padding:0 120px;
+}
+.bottom li{
+    width: 30vw;
+    flex-grow: 1;
+    margin-bottom:20px;
+}
+.bottom li:nth-child(2){
+    border-left:1px solid #cacaca;
+    border-right:1px solid #cacaca;
+}
+.bottom div{
+    width: 20vw;
+    margin:0 auto;
+}
+.bottom li p{
+    margin:0 auto;
+    font-size: 1.2vw;
+}
+.bottom li p:nth-child(-n+2){
+    color:#B69452;
+    text-align: center;
+    font-size: 1.5vw;
+    margin-bottom:30px;
+    font-weight: bold;
+}
+.gototopbtn{
+    text-decoration: none;
+    display:block;
+    width: 100px;
+    margin:0 auto;
+}
+.gototopbtn img:first-child{
+    width: 80px;
+    display: block;
+    margin:0 auto;
+    opacity:.1 ;
+    transition: .5s;
+}
+.float{
+    animation: topbtn 1s linear infinite;
+}
+@keyframes topbtn{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.gototopbtn img+img{
+    width: 20px;
+    display: block;
+    margin:10px auto;
+}
+.gototopbtn p{
+    text-align:center;
+    color: #B69452;
+    margin-bottom:10px;
+    font-weight: bold;
+}
+.tibame{
+    font-size: 1vw;
+    text-align: center;
+    margin-top: 30px;
+}
+/* ========back to top 設定======== */
+.gototopbtn:hover img:first-child{
+    opacity: 1;
+}
+/* ========網頁物件淡入======== */
+/* .slidemeL
+{
+    transform: translateX(-100px);
+} */

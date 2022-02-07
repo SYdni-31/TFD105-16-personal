@@ -1,0 +1,206 @@
+
+/* ========商品頁籤======== */
+.productname{
+    padding-right: 8vw;
+    padding-top: 60px;
+    text-align: right;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    height: 0;
+}
+.productname h1{
+    font-size:40px;
+    text-align: center;
+    text-shadow: 5px 5px 10px #141414;
+}
+.productname a{
+    text-decoration: none;
+    color: #cacaca;
+    display: inline-block;
+    margin-right:40px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px #141414;
+    transition:all .5s;
+    position: relative; 
+}
+/* =======頁籤hover======== */
+.productname a:hover{
+    color:#B69452;
+}
+.productname a::before{
+    content: "";
+    position: absolute;
+    top:20px;
+    left:0px;
+    width:0px;
+    border-bottom:2px solid #B69452;
+    transition:all .5s; 
+}
+.productname a:hover::before{
+    animation:btnslide .8s linear infinite;
+}
+@keyframes btnslide {
+    0%{width: 0;}
+    10%{
+        width: 20%;
+        transform: translateX(0);
+    }
+    90%{width: 20%;}
+    100%{
+        width: 0;
+        transform: translateX(60px);
+    }
+}
+/* ========第一區塊======== */
+.productone{
+    position: relative;
+    margin-bottom: 500px;
+}
+.productone img:first-child{
+    width: 50%;
+}
+.productone img:nth-of-type(2){
+    width: 60%;
+    position: absolute;
+    left: 40%;
+    top:70%;
+    /* ========閃電動畫 ========*/
+    animation: fadein 1s infinite ;
+}
+@keyframes fadein {
+    0%{opacity: 0;}
+    20%{opacity: 1;}
+    40%{opacity: 0;} 
+    80%{opacity: 0;}   
+    100%{opacity: 1;}
+}
+.productone h3{
+    color: #141414;
+    text-shadow: 2px 2px 15px #cacaca;
+    font-weight: bold;
+    font-size: 20px;
+}
+.productone h3:nth-of-type(1){
+    position: absolute;
+    top: 40%;
+    left: 55%;
+}
+.productone h3:nth-of-type(2){
+    position: absolute;
+    top: 55%;
+    left: 80%;
+    font-size: 16px;
+}
+.productone h3:nth-of-type(3){
+    margin-left: 8vw;
+    line-height: 1.5;
+}
+.productone img:nth-of-type(3){
+    width: 40%;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    transform: rotate(-120deg);
+    opacity: .6;
+}
+/* ========第二區塊======== */
+.producttwo {
+    display: flex;
+    position: relative;
+}
+.producttwo img{
+    width: 60%;
+    margin-left: auto;
+}
+.producttwo div{
+    position: absolute;
+    top:200px;
+    left: 8vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #141414;
+    font-size: 16px;
+    padding: 20px;
+}
+.producttwo h3{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/* ========第三區塊======== */
+.productthree {
+    position: relative;
+    margin-top: 150px;
+    bottom: #fff;
+}
+.productthree div:first-child{
+    width: 44vw;
+    height: 36vw;
+    border-radius: 50%;
+    box-shadow: 0 0 30px 60px #1d1d1d inset;
+    position: absolute;
+    top:0;
+    left: 6vw;    
+    z-index: 1;
+}
+.productthree img:nth-of-type(1){
+    width: 40vw;
+    margin-left: 8vw; 
+}
+.productthree img:nth-of-type(2){
+    width: 15vw;
+    position: absolute;  
+    top:30%;
+    left:20vw;
+    z-index: 2;
+
+}
+.productthree img:nth-of-type(3){
+    transform: rotate(-123.28deg);
+    position: absolute;
+    top:-45%;
+    width: 3vw;
+    z-index:3 ;
+}
+.productthree p{
+    color: #141414;
+    text-shadow: 2px 2px 15px #cacaca;
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    width: 400px;
+    position: absolute;
+    top: 30%;
+    left: 60vw;
+}
+/* ========第四區塊======== */
+.productfour img{
+    margin-top:80px;
+}
+.productfour img{
+    margin-left: 0;
+}
+.productfour div{
+    position: absolute;
+    top:350px;
+    left: 48vw;
+}
+/* ========第五區塊======== */
+.productfive img:first-child{
+    width: 100%;
+    margin-top: 100px;
+}
+.productfive p{
+    font-size: 20px;
+    text-align: center;
+    margin: 50px auto 20px;
+}
+.float{
+    display: block;
+    margin:0 auto;
+}
+/* ========魔杖移動======== */
+.wand1{
+    transform: translate(0, 0);
+    background-color: transparents;
+}

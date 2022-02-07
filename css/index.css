@@ -1,0 +1,147 @@
+
+/* ========top區塊======== */
+.indextop{
+    background-image: url(../img/index-bg.png);
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    font-size: 0px;
+    text-align: center;
+}
+.indextop h1{
+    display:inline-block;
+    padding-top: 40px;
+    width: 40%;
+    font-size: 60px;
+    color:#141414;
+    font-weight: bold;
+    text-shadow: 5px 5px 10px #cacaca59;
+    margin-top: 20px;
+}
+.indextop img{
+    width: 180px;
+    display:inline-block;
+    opacity:.2;
+    vertical-align:top;
+    margin-top: 20px;
+}
+/* ========第一區塊======== */
+.indexone{
+    display:flex;
+    padding-top: 100px;
+}
+.indexone img{
+    width: 50%;
+    margin-right: 40px;
+}
+.indexone div{
+    padding-right:10vw;
+}
+.indexone div h2{
+    font-size: 32px;
+    margin-top:20px;
+    font-weight: bold;
+}
+.indexone div > p{
+    font-size: 14px;
+    line-height: 1.2;
+    margin-top:50px;
+    margin-bottom:60px;
+}
+.indexone a{
+    color: #cacaca;
+    background-image: url(../img/b_btn.png);
+    display:block;
+    width: 220px;
+    height: 60px;
+    background-size: cover;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+/* ======第一區塊a hover====== */
+.indexone a p{
+    background-color: #1d1d1d;
+    display: inline-block;
+    width: 80px;
+    padding:0 15px 0 5px;
+    margin-left: 15px;
+    margin-top:20px;
+    transition:all .5s;
+}
+.indexone span {
+    position: absolute;
+    top:30px;
+    left:-10px;
+    width:0px;
+    border-bottom:2px solid #B69452;
+    transition:all .5s;
+}
+.indexone a:hover p{
+    transform: translateX(40px); 
+}
+.indexone a:hover span{
+    width:40px; 
+}
+/* ========第二區塊======== */
+.indextwo{
+    display:flex;
+    padding-top: 100px;
+}
+.indextwo img{
+    width: 50%;
+    margin-left: auto;
+    order:2;
+}
+.indextwo div{
+    padding-left:10vw;
+    order:1;
+}
+.indextwo h2{
+    font-size: 32px;
+    margin-top:20px;
+    font-weight: bold;
+}
+.indextwo div > p{
+    font-size: 14px;
+    line-height: 1.2;
+    margin-top:50px;
+    margin-bottom:60px;
+}
+.indextwo a{
+    color: #cacaca;
+    background-image: url(../img/d_btn.png);
+    display:block;
+    width: 230px;
+    height: 60px;
+    background-size: cover;
+    text-decoration: none;
+    font-size: 20px;
+    padding-left:100px;
+    box-sizing: border-box;
+    position: relative;
+}
+/* ======第二區塊a hover====== */
+.indextwo a p{
+    background-color: #1d1d1d;
+    display: inline-block;
+    width: 80px;
+    padding:0 15px 0 5px;
+    margin-left: 15px;
+    margin-top:20px;
+    transition:all .5s;
+}
+.indextwo span {
+    position: absolute;
+    top:30px;
+    right:-10px;
+    width: 0px;
+    border-bottom:2px solid #B69452;
+    transition:all .5s;
+}
+.indextwo a:hover p{
+    transform: translateX(-40px); 
+}
+.indextwo a:hover span{
+    width:40px; 
+}

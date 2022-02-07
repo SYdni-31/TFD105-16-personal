@@ -1,0 +1,54 @@
+
+/* ========top區塊======== */
+.usercenstertop{
+    background-image: url(../img/usersentertop.png);
+    width: 100%;
+    height: 200px;
+    background-size: 100%;
+}
+/* ========標題區塊======== */
+.username{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 30px 10vw;
+    padding: 10px;
+    border-bottom: 2px solid #cacaca;
+}
+.username h3{
+    font-size: 36px;
+    font-weight: bold;
+}
+.username a{
+    text-decoration: none;
+    color: #cacaca;
+    font-size: 20px;
+    transition: .5s;
+}
+.username a:hover{
+    color: #B69452;;
+}
+/* ========按鈕區塊======== */
+.userbutton{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+.userbutton ul{
+   display: flex;
+   justify-content: space-between;
+}
+.userbutton li a{
+    text-decoration: none;
+    color: #cacaca;
+    text-align: center;
+    transition: .5s;
+}
+.userbutton li a i{
+    font-size: 160px;
+    margin: 10px 40px 20px;
+}
+.userbutton li a:hover{
+    color: #B69452;
+    font-weight: bold;
+}

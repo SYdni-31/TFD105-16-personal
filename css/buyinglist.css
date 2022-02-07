@@ -1,0 +1,181 @@
+
+/* ========top======== */
+.buyinglisttop{
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+.buyinglisttop img{
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.buyinglisttop h3{
+    text-align-last: center;
+    padding-top: 30px;
+    font-size: 36px;
+    color: #B69452;
+}
+/* ========主區塊======== */
+.buyinglistmain{
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 120px;
+    padding-bottom: 90px;
+    border-top:2px solid #B69452;
+    border-bottom:2px solid #B69452;
+    position: relative;
+}
+/* ========清單內容======== */
+.list{
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 40px;
+}
+.list div{
+    display: inline-block;
+    vertical-align : top; 
+}
+.list div:first-child{
+    width: 30%;
+}
+.list div:first-child img{
+    width: 100%;
+}
+.list div:first-child button{
+    font-size: 18px;
+    display: block;
+    margin: 5px auto;
+    background-color: transparent;
+    color: #cacaca;
+    border:0;
+    border-bottom:1px solid #cacaca;
+    transition: .5s;
+}
+.list div:first-child button:hover{
+    color: #B69452;
+    border-bottom:1px solid #B69452
+}
+.list div:nth-of-type(2){
+    width: 65%;
+    margin-left: 3%;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #cacaca;
+}
+.list div:nth-of-type(2) p{
+    font-size: 20px;
+    line-height: 2;
+}
+.list > h3{
+    font-size: 20px;
+    position: absolute;
+    top:70%;
+    left:80%;
+}
+/* ========總計========== */
+.listtotal{
+    display: flex;
+    width: 30%;
+    vertical-align :text-top;
+    justify-content: space-between;
+    padding:20px;  
+    background-color: #cacaca;
+    color: #141414;  
+    border-radius: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    bottom: -5%;
+    transform: translate(-50%);
+}
+.listtotal h3{
+    font-size: 20px;
+}
+.listtotal p{
+    font-size: 32px;
+}
+/* ========底下按鈕======== */
+.buyinglistbtn{
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.buyinglistbtn1{
+    color: #cacaca;
+    background-image: url(../img/d_btn.png);
+    display:block;
+    width: 230px;
+    height: 60px;
+    background-size: cover;
+    text-decoration: none;
+    font-size: 20px;
+    padding-left:100px;
+    box-sizing: border-box;
+    position: relative;
+}
+.buyinglistbtn1 p{
+    background-color: #1d1d1d;
+    display: inline-block;
+    width: 80px;
+    padding:0 15px 0 5px;
+    margin-left: 15px;
+    margin-top:20px;
+    transition:all .5s;
+}
+.buyinglistbtn1 span {
+    position: absolute;
+    top:30px;
+    right:-10px;
+    width: 0px;
+    border-bottom:2px solid #B69452;
+    transition:all .5s;
+}
+.buyinglistbtn1:hover p{
+    transform: translateX(-40px); 
+}
+.buyinglistbtn1:hover span{
+    width:40px; 
+}
+
+.buyinglistbtn2{
+    color: #cacaca;
+    background-image: url(../img/b_btn.png);
+    display:block;
+    width: 220px;
+    height: 60px;
+    background-size: cover;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+.buyinglistbtn2 p{
+    background-color: #1d1d1d;
+    display: inline-block;
+    width: 80px;
+    padding:0 15px 0 5px;
+    margin-left: 15px;
+    margin-top:20px;
+    transition:all .5s;
+}
+.buyinglistbtn2 span {
+    position: absolute;
+    top:30px;
+    left:-10px;
+    width:0px;
+    border-bottom:2px solid #B69452;
+    transition:all .5s;
+}
+.buyinglistbtn2:hover p{
+    transform: translateX(40px); 
+}
+.buyinglistbtn2:hover span{
+    width:40px; 
+}

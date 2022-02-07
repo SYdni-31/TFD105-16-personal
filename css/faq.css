@@ -1,0 +1,139 @@
+
+/* ========常見問題 */
+.faqmod{
+    display: block;
+    width: 80%;
+    margin: 30px auto 0;
+    border-bottom: 2px solid #B69452;
+    margin-bottom: 60px;
+}
+h3{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.ansmod label{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    border-top: 2px solid #B69452;
+    box-sizing: border-box;
+    padding: 10px 20px ;
+    transition: .5s;
+}
+.ansmod label:hover{
+    color: #B69452;
+}
+.anscontent{
+    font-style: 20px;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    line-height: 2;
+    height: 0px;
+    opacity: 0;
+    transition: .5s;
+}
+/* =======手風琴切換======== */
+input[type="radio"]:checked + .anscontent{
+    opacity: 1;
+    height: 150px;
+}
+input[type="radio"]{
+    display: none;
+}
+/* =======手風琴切換+-切換======== */
+.ansbox{
+    position: relative;
+}
+.ansbox:before{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: #B69452;
+    border-radius: 555px;
+    position: absolute;
+    top:70%;
+    left: 95%;
+}
+.ansbox span{
+    display: block;
+    width: 5px;
+    height: 30px;
+    background-color: #B69452;
+    border-radius: 555px;
+    position: absolute;
+    top:41%;
+    left: 96.2%;
+    transition: .5s;
+}
+.ansbox:hover span{
+    transform: rotate(90deg);
+}
+/* ========提問區======== */
+.inputbox{
+    width: 70%;
+    margin: 0 auto;
+}
+.inputbox label{
+    font-size: 18px;
+    display: block;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.inputbox div input{
+    border-radius: 10px;
+    border:0;
+    padding: 5px 0px;
+    padding-left: 10px;
+    background-color: #c7c7bfab;
+    font-size: 18px;
+    font-weight: bold;
+    color: #141414;
+    outline-style: none ;
+}
+.inputbox div input:focus{
+    box-shadow: 3px 3px#cacaca;
+}
+.inputbox div:nth-of-type(-n+2){
+    display: inline-block;
+    width: 48%;
+}
+.inputbox div:nth-of-type(-n+2) input{
+    width: 90%;
+}
+.inputbox div:nth-of-type(3) input{
+    width: 92%;
+}
+.inputbox div textarea{
+    border-radius: 10px;
+    border:0;
+    width: 92%;
+    padding: 5px 0px;
+    padding-left: 10px;
+    background-color: #c7c7bfab;
+    font-size: 18px;
+    font-weight: bold;
+    color: #141414;
+    outline-style: none;
+    overflow: hidden;
+}
+.inputbox div textarea:focus{
+    box-shadow: 3px 3px#cacaca;
+}
+.inputbox > input{
+    display: block;
+    margin: 30px auto;
+    color: #cacaca;
+    background-color: #141414;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    border: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.inputbox > input:hover{
+    background-color: #B69452;
+}

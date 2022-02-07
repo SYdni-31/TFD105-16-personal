@@ -1,0 +1,181 @@
+
+/* ========top區塊======== */
+.abouttop{
+    background-image: url(../img/about-bg.png);
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    font-size: 0px;
+    text-align: center;
+}
+.abouttop h1{
+    display:inline-block;
+    width: 40%;
+    font-size: 60px;
+    color:#141414;
+    font-weight: bold;
+    text-shadow: 5px 5px 10px #cacaca59;
+}
+.abouttop img{
+    width: 140px;
+    display:block;
+    margin:0 auto;
+    padding-top: 40px;
+}
+.abouttop div{
+    width: 110px;
+    font-size: 24px;
+    color:#141414;
+    margin: 80px auto 0 auto;
+    font-weight: bold;
+    border-bottom: 2px solid #141414;
+}
+/* ========第一三區塊======== */
+.aboutone{
+    margin-top: 100px;
+    display: flex;
+    position: relative;
+}
+.aboutone div:first-child{
+    width: 750px;
+    height: 400px;
+    border:2px solid #B69452;
+    position: absolute;
+    top:250px;
+    left:10vw;
+}
+.aboutone h2{
+    font-size: 40px;
+    margin:120px 0 0 50px;
+}
+.aboutone div >p{
+    font-size: 16px;
+    margin: 120px 40px 0 40px;
+}
+.aboutonepic{
+    background-image: url(../img/aboutone.jpg);
+    background-size: 650px auto;
+    background-position: 0 -183px;
+    width: 650px;
+    height: 500px;
+    margin-left:auto;
+}
+.aboutone a{
+    color: #cacaca;
+    background-image: url(../img/b_btn.png);
+    display:block;
+    width: 220px;
+    height: 60px;
+    background-size: cover;
+    text-decoration: none;
+    font-size: 20px;
+    position:absolute;
+    top:580px;
+    left:72vw;
+    position: relative;
+}
+/* ======第一三區塊a hover====== */
+.aboutone a p{
+    background-color: #1d1d1d;
+    display: inline-block;
+    width: 80px;
+    padding:0 15px 0 5px;
+    margin-left: 15px;
+    margin-top:20px;
+    transition:all .5s;
+}
+.aboutone span {
+    position: absolute;
+    top:30px;
+    left:-10px;
+    width:0px;
+    border-bottom:2px solid #B69452;
+    transition:all .5s;
+}
+.aboutone a:hover p{
+    transform: translateX(40px); 
+}
+.aboutone a:hover span{
+    width:40px; 
+}
+/* ========第二區塊======== */
+.abouttwo{
+    margin-top: 200px;
+    display: flex;
+    position: relative;
+    margin-bottom: 200px;
+}
+.abouttwopic{
+    background-image: url(../img/abouttwo.jpg);
+    background-size: auto 500px;
+    background-position: -45px 0;
+    width: 650px;
+    height: 500px;
+}
+.abouttwo div:nth-child(2){
+    width: 800px;
+    height: 400px;
+    border:2px solid #B69452;
+    position: absolute;
+    top:250px;
+    left:28vw;
+}
+.abouttwo h2{
+    font-size: 40px;
+    margin:120px 0 0 320px;
+}
+.abouttwo div >p{
+    font-size: 16px;
+    margin: 120px 40px 0 40px;
+}
+.abouttwo a{
+    color: #cacaca;
+    background-image: url(../img/d_btn.png);
+    display:block;
+    width: 230px;
+    height: 60px;
+    background-size: cover;
+    text-decoration: none;
+    font-size: 20px;
+    padding-left:100px;
+    box-sizing: border-box;
+    position: absolute;
+    top:580px;
+    left:-45vw;
+    position: relative;
+}
+/* ======第二區塊a hover====== */
+.abouttwo a p{
+    background-color: #1d1d1d;
+    display: inline-block;
+    width: 80px;
+    padding:0 15px 0 5px;
+    margin-left: 15px;
+    margin-top:20px;
+    transition:all .5s;
+}
+.abouttwo span {
+    position: absolute;
+    top:30px;
+    right:-10px;
+    width: 0px;
+    border-bottom:2px solid #B69452;
+    transition:all .5s;
+}
+.abouttwo a:hover p{
+    transform: translateX(-40px); 
+}
+.abouttwo a:hover span{
+    width:40px; 
+}
+/* =======第三區塊pic======= */
+.aboutthreepic{
+    background-image: url(../img/aboutthree.jpg);
+    background-size: 1249px auto;
+    background-position: -448px 0px;
+    width: 650px;
+    height: 500px;
+    margin-left:auto;
+    display: block;
+    margin-bottom: 100px;
+}
