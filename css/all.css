@@ -308,8 +308,127 @@ body{
 .gototopbtn:hover img:first-child{
     opacity: 1;
 }
-/* ========網頁物件淡入======== */
-/* .slidemeL
-{
-    transform: translateX(-100px);
-} */
+/* ========登入視窗======== */
+.loginbg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #14141496;
+}
+.login{
+    width: 500px;
+    height: 300px;
+    background-color: #cacaca;
+    border-radius:10px;
+    position: relative;
+    position: fixed;
+    top:100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.logintitle{
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px;
+    border-bottom:2px solid #B69452;
+}
+.logintitle img{
+    width: 40px;
+    display: block;
+    margin-left: 120px;
+}
+.logintitle h3{
+    color: #141414;
+    font-size: 24px;
+    font-weight: bold;
+}
+.logintitle span{
+    display: block;
+    width: 50px;
+    height:50px;
+    background-color: #B69452;
+    position: absolute;
+    top:0;
+    right: 0;
+    border:2px solid #cacaca;
+    border-radius:10px;
+}
+.logintitle span:before{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: #141414;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 22.5px;
+    right: 5px;
+    border-radius: 5px;
+}
+.logintitle span::after{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: #141414;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 22.5px;
+    right: 5px;
+    border-radius: 5px;
+}
+.logintitle span:hover{
+    background-color: #141414b6;
+}
+.logintitle span:hover::before{
+    background-color: #cacaca;
+}
+.logintitle span:hover::after{
+    background-color: #cacaca;
+}
+.loginbox{
+    width: 60%;
+    margin: 0 auto;
+}
+.loginbox label{
+    color: #141414;
+    padding-left: 30px;
+}
+.loginbox input[type="text"]{
+    margin-top: 30px;
+    padding: 5px 0;
+    border-radius: 5px;
+    border: 0;
+}
+.login a:last-of-type{
+    text-decoration: none;
+    color: #B69452;
+    border-bottom: 1px dashed #B69452;
+    position: absolute;
+    top:190px;
+    left: 360px;
+}
+.loginbtn{
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+.loginbtn input{
+    display: inline-block;
+    margin: 20px;
+    color: #cacaca;
+    background-color: #141414;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.loginbtn input:hover{
+    background-color: #B69452;
+}

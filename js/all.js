@@ -103,3 +103,32 @@ $(function(){
             $(this).parents().siblings().find('span').animate({opacity:1},300)
         });
     });
+    // ========登入視窗========
+    let loginnav = document.getElementsByClassName('loginnav')[0];
+    loginnav.addEventListener('click', function(){
+        let foot = document.getElementsByClassName('bottom')[0];
+        if(foot.nextElementSibling.classList.contains('loginbg')){
+
+            }else{
+            foot.insertAdjacentHTML("afterend", `<article class="loginbg">
+            <section class="login">
+            <div class=" logintitle">
+                <img src="img/logo_14_s.svg" alt="">
+                <h3>會員登入</h3>
+                <span class="loginclose"></span>
+            </div>
+            <div class="loginbox">
+                <label for="log1">帳號：</label>
+                <input type="text" id="log1"><br>
+                <label for="log2">密碼：</label>
+                <input type="text" id="log2">
+            </div>
+            <a href="#">忘記密碼</a>
+            <div class="loginbtn">
+                <input type="button" value="登入">
+                <input type="button" value="註冊">
+            </div>
+            </section>
+        </article>`);
+        }
+    })
