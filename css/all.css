@@ -139,6 +139,7 @@ body{
     right:0;
     margin:auto ;
     display: none;
+    font-weight: bold;
 }
 .gotoshop h3{
     font-size: 24px;
