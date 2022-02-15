@@ -4,76 +4,182 @@ html{
 }
 body{
     color:#cacaca;
-    background-color:#1D1D1D;
+    background-color:#424242;
 }
 /* ==========頂端nav======== */
 .head{
     background-color: rgba(255, 255, 255, 0);
     display:flex;
+    align-items: center;
+    flex-wrap: wrap;
     height: 50px;
     width: 100%;
-    float:left;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;;
+    box-sizing: border-box;
     z-index: 100;
+}
+.head >a:first-child{
+    height: 50px;
+    margin-left: 10vw;
 }
 .head img{
     height: 30px;
     margin-top:10px;
 }
-.toplogo{
-    margin-left: 8vw;
-}
-.head > a:last-child{
-    margin-right: 8vw;
-    margin-top: 10px;
-    color:#cacaca;
-    font-size: 30px;
-    transition:.5s;
-}
-.head > a:last-child:hover{
-    color:#B69452;
-}
-.mainlist{
-    display:flex;
+.nav_main{
     margin-left:auto;
-    width:37.5vw;
 }
-.mainlist li{
+.head ul{
+    display:flex;
+}
+.head ul li{
+    flex-shrink: 0;
     flex-grow:1;
-    margin-top: 20px;
-    position: relative; 
 }
-.mainlist a{
+.head ul a{
     color: #cacaca;
     text-decoration: none;
-    font-size: 1.2vw;;
+    font-size: 12px;;
     font-weight: bold;
-    display: block;
-    height: 100%;
-    transition:.5s;
     text-align: center;
+    display: block;
+    line-height: 50px;
+    margin-right: 2vw;
+    transition:.5s;
+    position: relative; 
+}
+.head > a:last-of-type{
+    color:#cacaca;
+    font-size: 25px;
+    line-height: 50px;
+    transition:.5s;
+    margin-right: 10vw;
 }
 /* ========nav選單hover======== */
-.mainlist li::before{
+.head ul li a:before{
     content: "";
     position: absolute;
-    top:20px;
-    left:15px;
+    top:35px;
+    left:0;
     width:0;
     border-bottom:2px solid #B69452;
     transition:all .5s; 
 }
-.mainlist a:hover{
+.head ul a:hover{
     color: #B69452;
 }
-.mainlist li:hover::before{
-    width:70%;
+.head ul li:hover a:before{
+    width:100%;
+}
+.head > a:last-of-type:hover{
+    color:#B69452;
 }
 /* ========滾動nav透明度======== */
 .nav-colored{
     background-color: #141414;
 }
+/* ========nav hamburger======== */
+.hamburger{
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+    transition-property: background-color, filter;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    /* font: inherit;
+    color: inherit;
+    text-transform: none; */
+    background-color: transparent;
+    border: 0;
+    /* overflow: visible; */
+}
+.hamburger:hover .hamburger-inner,
+.hamburger:hover .hamburger-inner::before,
+.hamburger:hover .hamburger-inner::after{
+    background-color: #B69452;
+}
+.hamburger-box{
+    width: 40px;
+    height: 24px;
+    display: block;
+    position: relative; 
+}
+.hamburger-inner{
+    display: block;
+    top: 50%;
+    margin-top: -2px; 
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #cacaca;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+    background-color: #cacaca;
+}
+.hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; 
+}
+.hamburger-inner::before {
+    top: -10px; 
+}
+.hamburger-inner::after {
+    bottom: -10px; 
+}
+/* .hamburger.is-active:hover {
+      opacity: 0.7; 
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+      background-color: #000;
+} */
+  
+/* ========nav RWD======== */
+@media screen and (min-width: 768px){
+    div.nav_main{
+        display: block !important;
+    }
+}
+@media screen and (max-width: 767px){
+    div.nav_main{
+        display: none;
+        width: 100vw;
+        order:4 
+    }
+    div.nav_main ul{
+        display: block;
+        background-color: #141414;
+        width: 100vw;
+    }
+    button.hamburger{
+        display: block;
+    }
+    .head > a:last-of-type{
+        margin-left: auto;
+        margin-right: 20px;
+    }
+    .head li{
+        font-size: 16px;
+        margin: 0 10vw;
+        padding-bottom: 10px;
+    }
+    .head ul a{
+        font-size: 16px;
+        text-align: left;
+        border-bottom: 1px solid #B69452;
+    }
+    .head ul li:hover a:before{
+        width:0;
+    }
+}
+
 /* ========user&faqtop======== */
 .userfaqtop{
     background-image: url(../img/usersentertop.png);
@@ -310,13 +416,19 @@ body{
     opacity: 1;
 }
 /* ========登入視窗======== */
-.loginbg{
+.loginopen{
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: #14141496;
+    z-index: 98;
+    animation:loginfade .5s;
+}
+@keyframes loginfade {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
 .login{
     width: 500px;
@@ -325,7 +437,7 @@ body{
     border-radius:10px;
     position: relative;
     position: fixed;
-    top:100px;
+    top: 140px;
     left: 0;
     right: 0;
     margin: auto;
@@ -340,25 +452,25 @@ body{
 .logintitle img{
     width: 40px;
     display: block;
-    margin-left: 120px;
+    margin-left: 80px;
 }
 .logintitle h3{
     color: #141414;
     font-size: 24px;
     font-weight: bold;
 }
-.logintitle span{
+.logintitle button{
     display: block;
     width: 50px;
     height:50px;
     background-color: #B69452;
     position: absolute;
-    top:0;
-    right: 0;
+    top: 5px;
+    right: 5px;
     border:2px solid #cacaca;
     border-radius:10px;
 }
-.logintitle span:before{
+.logintitle button:before{
     content: '';
     display: block;
     width: 40px;
@@ -366,11 +478,11 @@ body{
     background-color: #141414;
     transform: rotate(45deg);
     position: absolute;
-    top: 22.5px;
-    right: 5px;
+    top: 20px;
+    left: 2.5px;
     border-radius: 5px;
 }
-.logintitle span::after{
+.logintitle button::after{
     content: '';
     display: block;
     width: 40px;
@@ -378,40 +490,39 @@ body{
     background-color: #141414;
     transform: rotate(-45deg);
     position: absolute;
-    top: 22.5px;
-    right: 5px;
+    top: 20px;
+    left: 2.5px;
     border-radius: 5px;
 }
-.logintitle span:hover{
+.logintitle button:hover{
     background-color: #141414b6;
 }
-.logintitle span:hover::before{
+.logintitle button:hover::before{
     background-color: #cacaca;
 }
-.logintitle span:hover::after{
+.logintitle button:hover::after{
     background-color: #cacaca;
 }
 .loginbox{
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
 }
 .loginbox label{
     color: #141414;
-    padding-left: 30px;
+    padding-left: 60px;
 }
 .loginbox input[type="text"]{
     margin-top: 30px;
-    padding: 5px 0;
+    padding: 5px;
     border-radius: 5px;
     border: 0;
+    outline-style: none ;
+    font-size: 14px;
 }
 .login a:last-of-type{
     text-decoration: none;
     color: #B69452;
     border-bottom: 1px dashed #B69452;
-    position: absolute;
-    top:190px;
-    left: 360px;
 }
 .loginbtn{
     display: block;

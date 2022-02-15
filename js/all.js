@@ -1,12 +1,20 @@
 // ========nav透明度設定========
 window.addEventListener('scroll', function (e) {
-    var nav = document.getElementsByClassName('nav')[0];
+    let nav = document.getElementsByClassName('nav')[0];
     if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
             nav.classList.add('nav-colored');
         } else {
-            nav.classList.remove('nav-colored');
+               nav.classList.remove('nav-colored');
         }
 });
+// ========nav hamburger========
+$(function(){
+    $("button.hamburger").on("click", function(){
+      $(".nav_main").slideToggle();
+      let nav = document.getElementsByClassName('nav')[0];
+      nav.classList.add('nav-colored');
+    });
+  });
 // ========back to top設定========
 	$('.gototopbtn').click(function(){ 
 		$('html,body').animate({scrollTop:0}, 500);
@@ -105,30 +113,47 @@ $(function(){
     });
     // ========登入視窗========
     let loginnav = document.getElementsByClassName('loginnav')[0];
-    loginnav.addEventListener('click', function(){
-        let foot = document.getElementsByClassName('bottom')[0];
-        if(foot.nextElementSibling.classList.contains('loginbg')){
-
-            }else{
-            foot.insertAdjacentHTML("afterend", `<article class="loginbg">
-            <section class="login">
+    let loginbg = document.getElementsByClassName('loginbg')[0];
+    if(loginbg.classList.contains('loginopen')){
+    }else{
+        loginnav.addEventListener('click', function(e){
+            loginbg.classList.add('loginopen')
+            loginbg.insertAdjacentHTML("afterbegin", `<section class="login">
             <div class=" logintitle">
                 <img src="img/logo_14_s.svg" alt="">
                 <h3>會員登入</h3>
-                <span class="loginclose"></span>
+                <button class="loginclose"></button>
             </div>
             <div class="loginbox">
                 <label for="log1">帳號：</label>
                 <input type="text" id="log1"><br>
                 <label for="log2">密碼：</label>
                 <input type="text" id="log2">
+                <a href="#">忘記密碼</a>
             </div>
-            <a href="#">忘記密碼</a>
             <div class="loginbtn">
                 <input type="button" value="登入">
                 <input type="button" value="註冊">
             </div>
-            </section>
-        </article>`);
-        }
-    })
+            </section>`);
+            e.preventDefault();
+        })
+    }
+document.addEventListener('click', function(e){
+    if(e.target.classList.contains("loginclose")){
+        loginbg.classList.remove("loginopen");
+        e.target.closest("section").remove();
+    }
+})
+// loginbg.addEventListener("click",function(){
+
+//     loginbg.classList.remove("loginopen");
+//     loginbg.innerText="";
+// })
+$(document).mouseup(function(e){
+    var _con = $('.login');
+    if(!_con.is(e.target) && _con.has(e.target).length === 0){
+        loginbg.classList.remove("loginopen");
+        loginbg.innerText="";
+    }
+  });
