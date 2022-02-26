@@ -190,6 +190,9 @@ body{
         text-align: left;
         border-bottom: 1px solid #B69452;
     }
+    .head ul li:last-child a{
+        border-bottom:0;
+    }
     .head ul li:hover a:before{
         width:0;
     }
@@ -204,7 +207,7 @@ body{
 }
 /* ========進一步選購======== */
 .gotoshop{
-    margin:15vw auto 0;   
+    margin: 0 auto;   
     width: 80vw;
 }
 .gotoshop h2{
