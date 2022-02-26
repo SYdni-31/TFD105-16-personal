@@ -19,31 +19,55 @@ $(function(){
 	$('.gototopbtn').click(function(){ 
 		$('html,body').animate({scrollTop:0}, 500);
 	});
-// ========進一步選購滑動設定========
-$(document).ready(function(){ 
-    let index = 0;
-    let liLen= $("ul.gotoshopmain li").length;
-    //選單向右移動按鈕
-    $(".btntoright").click(function(){
-        if(index < liLen-3){
-            $("ul.gotoshopmain li").animate({right:"+=345px"})
-            index++;
-        }else{
-            $("ul.gotoshopmain li").stop();
-            index = liLen-3;
+// // ========進一步選購滑動設定========
+// $(document).ready(function(){ 
+//     let index = 0;
+//     let liLen= $(".gotoshopitem").length;
+//     //選單向右移動按鈕
+//     $(".btntoright").click(function(){
+//         if(index < liLen-3){
+//             $(".gotoshopitem").animate({right:"+=33%"})
+//             index++;
+//         }else{
+//             index = liLen-3;
+//         }
+//     });
+//     // 向左
+//     $(".btntoleft").click(function(){
+//         if(index > 0){
+//             $(".gotoshopitem").animate({left:"+=33%"})
+//             index--;
+//         }else{
+//             index= 0;
+//         }
+//     });
+//    });
+
+// =========可惡的輪播owl套件=========
+$('.owl-carousel').owlCarousel({
+    loop:false,
+    margin:40,
+    nav:true,
+    dots:false,
+    responsive:{
+        0:{
+            items:2
+        },
+        992:{
+            items:3
+        },
+        1600:{
+            items:4
+        },
+        2100:{
+            items:5
         }
-    });
-    // 向左
-    $(".btntoleft").click(function(){
-        if(index > 0){
-            $("ul.gotoshopmain li").animate({left:"+=345px"})
-            index--;
-        }else{
-            $("ul.gotoshopmain li").stop();
-            index=0
-        }
-    });
-   });
+    }
+})
+
+
+
+
 // ========第一排商品列表區域切換========
 $(function(){
     $(".storecategory >ul >li").click(function(){
@@ -145,15 +169,19 @@ document.addEventListener('click', function(e){
         e.target.closest("section").remove();
     }
 })
-// loginbg.addEventListener("click",function(){
-
-//     loginbg.classList.remove("loginopen");
-//     loginbg.innerText="";
-// })
 $(document).mouseup(function(e){
     var _con = $('.login');
     if(!_con.is(e.target) && _con.has(e.target).length === 0){
         loginbg.classList.remove("loginopen");
         loginbg.innerText="";
     }
+  });
+
+  document.addEventListener("DOMContentLoaded", function(){
+  
+    var btn_hamburger = document.getElementsByClassName("hamburger")[0];
+    btn_hamburger.addEventListener("click", function(){
+      this.classList.toggle("hamactive");
+    });
+    
   });

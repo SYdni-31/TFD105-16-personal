@@ -8,7 +8,9 @@ body{
 }
 /* ==========頂端nav======== */
 .head{
-    background-color: rgba(255, 255, 255, 0);
+    background-color: transparent;
+    /* text-shadow: 1px 1px #141414; */
+    background: linear-gradient(#141414 10px, transparent);
     display:flex;
     align-items: center;
     flex-wrap: wrap;
@@ -88,12 +90,8 @@ body{
     transition-property: background-color, filter;
     transition-duration: 0.5s;
     transition-timing-function: linear;
-    /* font: inherit;
-    color: inherit;
-    text-transform: none; */
     background-color: transparent;
     border: 0;
-    /* overflow: visible; */
 }
 .hamburger:hover .hamburger-inner,
 .hamburger:hover .hamburger-inner::before,
@@ -132,15 +130,32 @@ body{
 .hamburger-inner::after {
     bottom: -10px; 
 }
-/* .hamburger.is-active:hover {
-      opacity: 0.7; 
+.hamburger-act .hamburger-inner {
+    transition-duration: 0.22s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); 
 }
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner::after {
-      background-color: #000;
-} */
+.hamburger-act .hamburger-inner::before {
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; 
+}
+.hamburger-act .hamburger-inner::after {
+    transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); 
+}
   
+.hamburger-act.hamactive .hamburger-inner {
+    transform: rotate(225deg);
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); 
+}
+.hamburger-act.hamactive .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; 
+}
+.hamburger-act.hamactive .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); 
+}
 /* ========nav RWD======== */
 @media screen and (min-width: 768px){
     div.nav_main{
@@ -189,8 +204,7 @@ body{
 }
 /* ========進一步選購======== */
 .gotoshop{
-    margin:0 auto;
-    margin-top:100px;
+    margin:15vw auto 0;   
     width: 80vw;
 }
 .gotoshop h2{
@@ -199,45 +213,30 @@ body{
     font-weight: bold;
 }
 .toshopmaindiv{
-    overflow: hidden;
-    white-space: nowrap;
+    /* 沒owl時輪播的設定 */
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
 }
-.gotoshop ul{
-    font-size: 0;
+.gotoshopitem{
+    /* 沒owl時輪播的設定 */
+    /* width:calc((100% - 12%)/3); */
+    /* margin: 2%; */
+    /* display:inline-block; */
+    position: relative; 
 }
-.gotoshop li{
-    width: 315px;
-    height: 360px;
-    display:inline-block;
-    background-size: cover;
-    margin-left: 30px;
+.gotoshopitem img{
+    width: 100%;
 }
-.gotoshop a{
+.gotoshopitem a{
     color: #141414;
     text-decoration: none;
 }
-.gotoshop1{
-    background-image: url(../img/gotoshop1.png);
-    position: relative;
-}
-.gotoshop2{
-    background-image: url(../img/gotoshop2.png);
-    position: relative;
-}
-.gotoshop3{
-    background-image: url(../img/gotoshop3.png);
-    position: relative;
-}
-.gotoshop4{
-    background-image: url(../img/gotoshop4.png);
-    position: relative;
-}
-.gotoshop li div{
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 280px;
-    height:320px;
-    padding:0 30px;
-    padding-top: 60px;
+.gotoshopitem div{
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 90%;
+    height: 80%;
+    padding:0 5%;
+    padding-top: 10%;
     box-sizing: border-box;
     position: absolute;
     top:0;
@@ -247,84 +246,114 @@ body{
     display: none;
     font-weight: bold;
 }
-.gotoshop h3{
+.gotoshopitem h3{
     font-size: 24px;
     font-weight: bold;
-    margin-bottom:30px;
+    margin-bottom:10%;
 }
-.gotoshop p{
+.gotoshopitem p{
     font-size: 12px;
     line-height: 1.2;
     display: block;
-    padding-left: 20px;
+    padding-left: 10%;
 }
-.gotoshop p:last-child{
-    margin-top: 60px;
-    text-align:right;
+.gotoshopitem p:last-child{
+    margin-top: 30%;
+    text-align: right;
     font-weight: bold;
 }
-/* ========進一步選購圖片的hover======== */
-.gotoshop ul li:hover div{
-    display:block;
-    animation:shophover 1s forwards ;
+/* ========進一步選購圖片的hover&RWD======== */
+@media screen and (max-width: 991.98px){
+    .gotoshopitem div{
+        padding-top: 5%;
+        display:block;
+        bottom:-35vw;
+        width: 100%;
+    }
+    .gotoshopitem h3{
+        font-size: 3vw;
+        margin-bottom:0;
+    }
+    .gotoshopitem p{
+        font-size: 1.5vw;
+        padding-left: 0;
+    }
+    .gotoshopitem p:last-child{
+        margin-top: 5%;
+    }
 }
-@keyframes shophover{
-    0%{
-        transform: translateX(30px);
-        opacity: 0;
+@media screen and (min-width: 992px){    
+    .gotoshopitem:hover div{
+        display:block;
+        animation:shophover 1s forwards;
     }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
+    @keyframes shophover{
+        0%{
+            transform: translateX(30px);
+            opacity: 0;
+        }100%{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    } 
 }
 /* ========選購箭頭======== */
-.gotoshoparr{
-    margin:0 auto;
-    margin-top: 40px;
-    display: block;
-    width: 360px;
-    text-align: justify;
-}
-.gotoshoparr:after {
-    content: '';
+/* .btntoright, .btntoleft{
     display: inline-block;
-    width: 100%;
-  }
-.btntoright, .btntoleft{
-    display: inline-block;
-    margin:0;
-    padding: 0;
+    width: 20%;
     border: 0;
-    outline: 0;
-    background-color:#1d1d1d00;
+    outline: 0; 
+    background-color:transparent;
+    vertical-align: top;
+} 
+.btntoright img, .btntoleft img{
+    width: 100%;
+}  */
+
+.owl-nav button.owl-prev span{
+    background-image: url('../img/d_arr.svg');
+    background-size: cover;
+    display: block;
+    width: 15vw;
+    height: 1.5vw;
+    font-size: 0;
+    margin:0 4vw;
 }
+.owl-nav button.owl-next span{
+    background-image: url('../img/b_arr.svg');
+    background-size: cover;
+    display: block;
+    width: 15vw;
+    height: 1.5vw;
+    font-size: 0;
+    margin:0 4vw;
+}
+
 /* ========箭頭抖動======== */
-.btntoright:hover img{
+.toshopmaindiv .owl-theme .owl-nav .owl-prev:hover, .toshopmaindiv .owl-theme .owl-nav .owl-next:hover{
+    background-color: transparent;
+}
+.owl-nav button.owl-prev:hover span{
     animation: arrright 1s linear infinite;
 }
 @keyframes arrright{
     0%{
         transform: translateX(0px);
-    }
-    50%{
+    }50%{
         transform: translateX(10px);
-    }
-    100%{
+    }100%{
         transform: translateX(0px);
     }
 }
-.btntoleft:hover img{
+.owl-nav button.owl-next:hover span{
     animation: arrleft 1s linear infinite;
 }
 @keyframes arrleft{
     0%{
         transform: translateX(0px);
-    }
-    50%{
+    }50%{
         transform: translateX(-10px);
-    }
-    100%{
+    }100%{
         transform: translateX(0px);
     }
 }
@@ -333,16 +362,16 @@ body{
 .bottom{
     margin-top:60px;
     background-color: #141414;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 .bottom h2{
-    font-size: 3vw;
+    font-size: 32px;
     text-align: center;
-    margin:20px auto;
+    margin:30px auto;
 }
 .bottom ul{
     display:flex;
-    padding:0 120px;
+    padding:0 10vw
 }
 .bottom li{
     width: 30vw;
@@ -354,19 +383,20 @@ body{
     border-right:1px solid #cacaca;
 }
 .bottom div{
-    width: 20vw;
+    width: 90%;
     margin:0 auto;
 }
 .bottom li p{
     margin:0 auto;
-    font-size: 1.2vw;
+    font-size: 16px;
+    line-height: 1.6;
 }
 .bottom li p:nth-child(-n+2){
     color:#B69452;
     text-align: center;
-    font-size: 1.5vw;
-    margin-bottom:30px;
-    font-weight: bold;
+    font-size: 18px;
+    margin-bottom:20px;
+    font-weight: bold;      
 }
 .gototopbtn{
     text-decoration: none;
@@ -380,6 +410,14 @@ body{
     margin:0 auto;
     opacity:.1 ;
     transition: .5s;
+}
+.gototopbtn:hover img:first-child{
+    opacity: 1;
+}
+@media screen and (max-width: 767.98px){
+    .gototopbtn img:first-child{
+        opacity:1 ;
+    }
 }
 .float{
     animation: topbtn 1s linear infinite;
@@ -407,14 +445,24 @@ body{
     font-weight: bold;
 }
 .tibame{
-    font-size: 1vw;
+    font-size: 12px;
     text-align: center;
     margin-top: 30px;
 }
-/* ========back to top 設定======== */
-.gototopbtn:hover img:first-child{
-    opacity: 1;
+/* ========底端footer RWD======== */
+@media screen and (max-width: 992px)  {
+    .bottom h2{
+        font-size: 24px;
+    }
+    .bottom li p{
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .bottom li p:nth-child(-n+2){
+        font-size: 16px;
+    }
 }
+
 /* ========登入視窗======== */
 .loginopen{
     position: fixed;
@@ -423,7 +471,7 @@ body{
     width: 100%;
     height: 100%;
     background-color: #14141496;
-    z-index: 98;
+    z-index: 200;
     animation:loginfade .5s;
 }
 @keyframes loginfade {
