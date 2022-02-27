@@ -51,6 +51,9 @@ $('.owl-carousel').owlCarousel({
     dots:false,
     responsive:{
         0:{
+            items:1
+        },
+        576:{
             items:2
         },
         992:{

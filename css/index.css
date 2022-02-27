@@ -9,13 +9,14 @@
     background-position: center;
     font-size: 0px;
     text-align: center;
-    margin-bottom: 15vh;
+    margin-bottom: 10vh;
 }
 .indextop h1{
     display:inline-block;
     padding-top: 200px;
     width: 40%;
     font-size: 4vw;
+    font-size: max(4vw, 16px);
     color:#B69452;
     font-weight: bold;
     text-shadow: 1px 1px 10px #141414;
@@ -32,7 +33,7 @@
 /* ========第一區塊======== */
 .indexone{
     display:flex;
-    padding-bottom: 15vh;
+    padding-bottom: 10vh;
 }
 .indexone img{
     display: block;
@@ -73,7 +74,7 @@
     background-color: #424242;
     display: inline-block;
     width: 90px;
-    padding:0 15px 0 5px;
+    padding:0 15px 0 10px;
     margin-left: 15px;
     margin-top:20px;
     text-align: center;
@@ -88,7 +89,6 @@
 @media screen and (max-width: 991.98px) {
     .indexone a p{
         animation: indexoneauto 3s infinite;
-        font-size: min(4vw, 20px);
     }
     @keyframes indexoneauto {
         0%{
@@ -163,7 +163,6 @@
 @media screen and (max-width: 991.98px) {
     .indexone{
         display:block;
-        padding-top:10vw;
     }
     .indexone img{
         width: 80vw;
@@ -175,10 +174,12 @@
     }
     .indexone div h2{
         font-size:4vw;
+        font-size: max(4vw, 20px);
         text-align: center;
     }
     .indexone div > p{
         font-size: 3vw;
+        font-size: max(3vw, 14px);
         margin:5vw;
         border-left: 2px solid #B69452;
     }
@@ -191,7 +192,7 @@
 .indextwo{
     display:flex;
     justify-content: flex-end;
-    padding-bottom: 15vh;
+    margin-bottom: 10vh;
 }
 .indextwo img{
     display: block;
@@ -249,7 +250,6 @@
 @media screen and (max-width: 991.98px) {   
     .indextwo a p{
         animation: indextwoauto 3s infinite;
-        font-size: min(4vw, 20px);
     }
     @keyframes indextwoauto {
         0%{
@@ -298,7 +298,6 @@
 @media screen and (max-width: 991.98px)  {
     .indextwo{
         display:block;
-        padding-top:10vw;
     }
     .indextwo img{
         width: 80vw;
@@ -310,10 +309,12 @@
     }
     .indextwo div h2{
         font-size:4vw;
+        font-size: max(4vw, 20px);
         text-align: center;
     }
     .indextwo div > p{
         font-size: 3vw;
+        font-size: max(3vw, 14px);
         margin:5vw;
         border-right: 2px solid #B69452;
     }

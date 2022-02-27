@@ -8,7 +8,7 @@
     background-position: center;
     font-size: 0px;
     text-align: center;
-    margin-bottom: 15vh;
+    margin-bottom: 10vh;
 }
 .abouttop h1{
     display:inline-block;
@@ -52,7 +52,7 @@
 .aboutone{
     display: flex;
     position: relative;
-    margin-bottom: calc(15vw + 15vh);
+    margin-bottom: calc(15vw + 10vh);
 }
 .aboutone > img{
     width: 60vw;
@@ -73,7 +73,6 @@
 .aboutone h2{
     display: block;
     width: 25vw;
-    height: 8vw;
     font-size: 32px;
     text-align: center;
     padding: 6vw 0 1vw 0;
@@ -105,16 +104,28 @@
 }
 @media screen and (max-width: 991.98px) {
     .aboutone{
-        margin-bottom: calc(12vw + 15vh + 60px);
+        margin-bottom: calc(30vw + 10vh + 60px);
     }
+    .aboutone div{
+        width: 80vw;
+        height: 45vw;
+        left:10vw;
+    }
+    /* .aboutone > img{
+        height: 30vw;
+    } */
     .aboutone h2{
+        width: 29vw;
         font-size: 3.8vw;
+        font-size: max(3.8vw, 18px);
+        line-height: max(4vw, 20px);
     }
     .aboutone div >p{
         font-size: 2vw;
+        font-size: max(3vw, 13px);
     }
     .aboutone a{
-        top:42vw;
+        top:60vw;
         left: 14vw;
         font-size: min(4vw, 20px);
     }
@@ -153,7 +164,6 @@
     }
     .aboutone a span{
         animation: aboutautospan 3s infinite;
-        left:0;
     } 
 }
 @keyframes aboutautospan {
@@ -186,7 +196,7 @@
 .abouttwo{
     display: flex;
     position: relative;
-    margin-bottom: calc(15vw + 15vh);
+    margin-bottom: calc(15vw + 10vh);
 }
 .abouttwo > img{
     width: 60vw;
@@ -205,7 +215,6 @@
 .abouttwo h2{
     display: block;
     width: 25vw;
-    height: 8vw;
     font-size: 32px;
     text-align: center;
     margin-left: 40vw;
@@ -240,18 +249,27 @@
 }
 @media screen and (max-width: 991.98px) {
     .abouttwo{
-        margin-bottom: calc(12vw + 15vh + 60px);
+        margin-bottom: calc(30vw + 10vh + 60px);
+    }
+    .abouttwo div{
+        width: 80vw;
+        height: 45vw;
+        right:10vw;
     }
     .abouttwo h2{
+        width: 29vw;
+        margin-left: 51vw;
         font-size: 3.8vw;
+        font-size: max(3.8vw, 18px);
+        line-height: max(4vw, 20px);
     }
     .abouttwo div >p{
         font-size: 2vw;
+        font-size: max(3vw, 13px);
     }
     .abouttwo a{
-        top:42vw;
+        top:60vw;
         right:14vw;
-        font-size: min(4vw, 20px);
     }
 }
 /* ======第二區塊a hover&RWD====== */
@@ -272,7 +290,6 @@
 @media screen and (max-width: 991.98px) {
     .abouttwo a p{
         animation: abouttwoauto 3s infinite;
-        font-size: min(4vw, 20px);
     }
     @keyframes abouttwoauto {
         0%{
@@ -287,7 +304,6 @@
     }
     .abouttwo a span{
         animation: aboutautospan 3s infinite;
-        right:0;
     } 
 }
 @media screen and (min-width: 992px) {

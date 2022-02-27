@@ -211,8 +211,9 @@ body{
     width: 80vw;
 }
 .gotoshop h2{
-    font-size: 32px;
-    margin-bottom: 40px;
+    font-size: 4vw;
+    font-size: max(4vw, 20px);
+    margin-bottom: 5vh;
     font-weight: bold;
 }
 .toshopmaindiv{
@@ -275,16 +276,26 @@ body{
     }
     .gotoshopitem h3{
         font-size: 3vw;
+        font-size: max(3vw, 14px);
         margin-bottom:0;
     }
     .gotoshopitem p{
+        padding-top: 5%;
         font-size: 1.5vw;
+        font-size: max(1.5vw, 12px);
         padding-left: 0;
     }
     .gotoshopitem p:last-child{
         margin-top: 5%;
+        margin-right: 5%;
     }
 }
+@media screen and (max-width: 575.98px){
+    .gotoshopitem div{
+        bottom:-80vw;
+    }
+}
+
 @media screen and (min-width: 992px){    
     .gotoshopitem:hover div{
         display:block;
@@ -404,7 +415,7 @@ body{
 .gototopbtn{
     text-decoration: none;
     display:block;
-    width: 100px;
+    width: 60vw;
     margin:0 auto;
 }
 .gototopbtn img:first-child{
@@ -455,14 +466,17 @@ body{
 /* ========底端footer RWD======== */
 @media screen and (max-width: 992px)  {
     .bottom h2{
-        font-size: 24px;
+        font-size:4vw;
+        font-size: max(4vw, 20px)
     }
     .bottom li p{
-        font-size: 14px;
+        font-size: 3vw;
+        font-size: max(3vw, 12px);
         line-height: 1.6;
     }
     .bottom li p:nth-child(-n+2){
-        font-size: 16px;
+        font-size:3.2vw;
+        font-size: max(3.2vw, 14px)
     }
 }
 
