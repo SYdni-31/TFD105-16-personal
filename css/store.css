@@ -3,20 +3,31 @@
 .storetop{
     background-image: url(../img/indexone.png);
     width: 100%;
-    height: 600px;
-    background-size:1440px;
+    height: 500px;
+    background-size:cover;
     text-align: center;
 }
 .storetop h1{
     display:inline-block;
     width: 40%;
-    font-size: 60px;
+    font-size: 4vw;
+    font-size: max(4vw, 20px);
     color:#141414;
     font-weight: bold;
-    text-shadow: 5px 5px 10px #B69452;
+    text-shadow: 2px 2px #B69452;
     margin-top: 300px;
     opacity: .8;
 }
+/* ========top區塊 RWD======== */
+@media screen and (max-width: 768px)  {
+    .storetop{
+        height: 200px;
+    }
+    .storetop h1{
+        margin-top: 100px; 
+    }
+}
+
 /* ========分類區塊======== */
 .storecategory{
     position: sticky;
@@ -24,18 +35,23 @@
     z-index: 90;
 }
 .storecategory >ul{
-    display: flex;
-    padding:0 10vw ;
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+    white-space: nowrap;
+    font-size: 0;
 }
 .storecategory >ul>li{
-    width: 120px;
+    cursor: pointer; 
+    display: inline-block;
+    width: 90px;
     height: 30px;
-    margin:20px auto;
+    margin:15px;
     background-color: #cacaca;
     border-radius: 555px;
     font-weight: bold;
     color: #141414;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     line-height: 30px;
     position: relative;
@@ -47,8 +63,10 @@
     right: 0;
     white-space: nowrap;
     display: none;
+    font-size: 0;
 }
 .categorysecond li{
+    cursor: pointer; 
     width: 90px;
     height: 25px;
     display: inline-block;
@@ -57,7 +75,7 @@
     text-align: center;
     font-size: 14px;
     line-height: 25px;
-    margin:15px auto;
+    margin:15px;
     background-color: #cacaca;
     border-radius: 555px;
     font-weight: bold;
@@ -68,45 +86,85 @@
     color: #cacaca;;
     box-shadow: 2px 2px  #cacaca;
 }
+.storecategory ul li[class="on"] ul{
+    display:block;
+}
 /* ========分類的hover======== */
 .storecategory li:hover{
     background-color: #B69452;
 }
 .storecategory li:hover ul{
     display: block;
+    z-index: 91;
     animation:shophover .5s forwards;
+}
+/* ========分類的RWD======== */
+@media screen and (max-width: 992px){
+    .storecategory>ul{
+        overflow-x: auto;
+        scrollbar-color:#cacaca;
+        touch-action: pan-x;
+    }
+    .categorysecond{
+        position: absolute;
+        right: 0;
+        white-space: nowrap;
+        display: none;
+    }
 }
 /*========商品列表======== */
 .storeline ul{
-    width: 84%;
+    width: 80%;
     margin:0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-columns: repeat(4, 25%);
     justify-content: space-between;
+}
+@media screen and (min-width: 1800px){
+    .storeline ul{
+        grid-template-columns: repeat(5, 20%);
+    }
+}
+@media screen and (max-width: 992px) and (min-width: 768px ){
+    .storeline ul{
+        grid-template-columns: repeat(3, 33%);
+    }
+}
+@media screen and (max-width: 767.98px) and (min-width: 576px ){
+    .storeline ul{
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+@media screen and (max-width: 575.98px) {
+    .storeline ul{
+        width: 70%;
+        grid-template-columns: repeat(1, 100%);
+    }
 }
 .storeline li{
     margin:10px;
     position: relative;
 }
 .storeline img{
-    width: 270px;
+    width: 100%;
 }
 .storeline a{
     text-decoration: none;
     color: #cacaca;
 }
-.storeline li a >p{
+.storeline li a > p{
     font-size:20px;
     font-weight: bold;
-    text-align-last: center;
+    text-align: center;
     margin-top: 20px;
 }
+/* ========商品列表hover &RWD======== */
 .storeline div{
     background-color: rgba(255, 255, 255, 0.5);
-    width: 230px;
-    height: 300px;
+    width: 90%;
+    height: 80%;
     position: absolute;
-    top: 30px;
+    top: 5%;
     right: 0;
     padding:60px 20px 0;
     box-sizing: border-box;
@@ -118,13 +176,14 @@
     font-size: 16px;
     font-weight: bold;
 }
-/* ========商品列表hover======== */
-.storeline li:hover div{
-    display:block;
-    animation:shophover 1s forwards ;
-}
-.storeline a:hover >p{
-    color: #B69452;
+@media screen and (min-width: 992px){
+    .storeline li:hover div{
+        display:block;
+        animation:shophover 1s forwards ;
+    }
+    .storeline a:hover >p{
+        color: #B69452;
+    }
 }
 /* ========商品列表區域切換原始狀態======== */
 .storeline{

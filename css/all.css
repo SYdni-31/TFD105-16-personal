@@ -301,16 +301,16 @@ body{
         display:block;
         animation:shophover 1s forwards;
     }
-    @keyframes shophover{
-        0%{
-            transform: translateX(30px);
-            opacity: 0;
-        }100%{
-            transform: translateX(0px);
-            opacity: 1;
-        }
-    } 
 }
+@keyframes shophover{
+    0%{
+        transform: translateX(30px);
+        opacity: 0;
+    }100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+} 
 /* ========選購箭頭======== */
 /* .btntoright, .btntoleft{
     display: inline-block;
@@ -500,15 +500,15 @@ body{
     height: 300px;
     background-color: #cacaca;
     border-radius:10px;
-    position: relative;
     position: fixed;
-    top: 140px;
+    top: 20vh;
     left: 0;
     right: 0;
     margin: auto;
 }
 .logintitle{
     display: flex;
+    justify-content: center;
     width: 60%;
     margin: 0 auto;
     padding: 30px;
@@ -517,7 +517,6 @@ body{
 .logintitle img{
     width: 40px;
     display: block;
-    margin-left: 80px;
 }
 .logintitle h3{
     color: #141414;
@@ -585,9 +584,8 @@ body{
     font-size: 14px;
 }
 .login a:last-of-type{
-    text-decoration: none;
+    text-decoration: underline #B69452 dashed 1px;
     color: #B69452;
-    border-bottom: 1px dashed #B69452;
 }
 .loginbtn{
     display: block;
@@ -608,4 +606,45 @@ body{
 }
 .loginbtn input:hover{
     background-color: #B69452;
+}
+/* ========登入視窗 RWD======== */
+@media screen and (max-width:575.98px){
+    .login{
+        width: 98%;
+        height: 300px;
+        top: 20vh;
+    }
+    .logintitle{
+        padding: 5%;
+        padding-left: 10%;
+    }
+    .logintitle h3{
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .loginbox{
+        padding-left: 10%;
+    }
+    .loginbox label{
+        padding-left: 10%;
+    }
+    .loginbox input[type="text"]{
+        width: 50%;
+    }
+    .login a:last-of-type{
+        display: block;
+        width: 80px;
+        margin: 2% auto 5%;
+        padding-left: 40%;
+        
+    }
+    .loginbtn{
+        width: 70%;
+        padding-left: 10%;
+    }
+    .loginbtn input{
+        margin: 0 5%;
+        width: 80px;
+    }
+
 }

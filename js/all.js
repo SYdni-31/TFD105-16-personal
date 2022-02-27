@@ -43,33 +43,6 @@ $(function(){
 //     });
 //    });
 
-// =========可惡的輪播owl套件=========
-$('.owl-carousel').owlCarousel({
-    loop:false,
-    margin:40,
-    nav:true,
-    dots:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        576:{
-            items:2
-        },
-        992:{
-            items:3
-        },
-        1600:{
-            items:4
-        },
-        2100:{
-            items:5
-        }
-    }
-})
-
-
-
 
 // ========第一排商品列表區域切換========
 $(function(){
