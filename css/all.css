@@ -197,14 +197,15 @@ body{
         width:0;
     }
 }
-
 /* ========user&faqtop======== */
 .userfaqtop{
     background-image: url(../img/usersentertop.png);
     width: 100%;
     height: 200px;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
 }
+
 /* ========進一步選購======== */
 .gotoshop{
     margin: 0 auto;   

@@ -33,7 +33,7 @@
 }
 
 /* ========top區塊 RWD======== */
-@media screen and (max-width: 768px)  {
+@media screen and (max-width: 768px) {
     .abouttop{
         height: 200px;
     }

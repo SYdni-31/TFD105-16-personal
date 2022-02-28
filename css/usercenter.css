@@ -1,38 +1,48 @@
 
-/* ========top區塊======== */
-.usercenstertop{
-    background-image: url(../img/usersentertop.png);
-    width: 100%;
-    height: 200px;
-    background-size: 100%;
-}
 /* ========標題區塊======== */
 .username{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin: 30px 10vw;
-    padding: 10px 30px;
+    padding: 10px 20px;
     border-bottom: 2px solid #cacaca;
+    flex-wrap:wrap;
+    font-size: 32px;
+    font-size: max(min(32px,4vw), 20px);
+}
+.username h1{
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2;
 }
 .username h3{
-    font-size: 36px;
     font-weight: bold;
+    text-align: center;
 }
 .username a{
     text-decoration: none;
     color: #cacaca;
     font-size: 20px;
+    font-size: max(min(20px,2vw), 14px);
     font-weight: bold;
     transition: .5s;
 }
 .username a:hover{
     color: #B69452;
 }
+/* ========標題區塊 RWD======== */
+@media screen and (max-width: 576px){
+    .username{
+        margin: 30px 5vw;
+        padding: 10px 0;
+    }
+}
 /* ========按鈕區塊======== */
 .userbutton{
     display: block;
-    width: 60%;
+    width: 75vw;
     margin: 0 auto;
 }
 .userbutton ul{
@@ -44,12 +54,13 @@
     color: #cacaca;
     text-align: center;
     font-size: 20px;
+    font-size: max(min(20px,2vw), 14px);
     font-weight: bold;
     transition: .5s;
 }
 .userbutton li a i{
-    font-size: 120px;
-    margin: 30px 40px;
+    font-size: 10vw;
+    margin: 2vw;
 }
 .userbutton li a:hover{
     color: #B69452;
