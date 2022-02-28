@@ -1,7 +1,7 @@
 
 /* ========商品頁籤======== */
 .productname{
-    padding-right: 8vw;
+    padding: 0 12vw;
     padding-top: 60px;
     text-align: right;
     position: sticky;
@@ -18,11 +18,41 @@
     text-decoration: none;
     color: #cacaca;
     display: inline-block;
-    margin-right:40px;
+    margin:10px 5% 10vh 0;
     font-weight: bold;
     text-shadow: 2px 2px 5px #141414;
     transition:all .5s;
     position: relative; 
+}
+@media screen and (max-width:991.98px){
+    .productname{
+        text-align:center;
+    }
+    .productname h1{
+        display: inline-block;
+        width: 50%;
+        margin-right: 10%;
+        text-align: right;
+        font-size:max(4vw, 24px);
+    }
+    .productname a{
+        margin:0;
+        width: 18%;
+        font-size:max(1.5vw, 12px);
+    }
+}
+@media screen and (max-width:575.98px){
+    .productname h1{
+        width: 100%;
+        margin-right:0;
+        text-align: center;
+        font-size:max(4vw, 24px);
+    }
+    .productname a{
+        width: 25%;
+        margin-top: 10px;
+        text-align: right;
+    }
 }
 /* =======頁籤hover======== */
 .productname a:hover{
@@ -55,10 +85,11 @@
 /* ========第一區塊======== */
 .productone{
     position: relative;
-    margin-bottom: 500px;
+    margin-bottom: 30%;
 }
 .productone img:first-child{
     width: 50%;
+    opacity: .6;
 }
 .productone img:nth-of-type(2){
     width: 60%;
@@ -79,18 +110,21 @@
     color: #141414;
     text-shadow: 2px 2px 15px #cacaca;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2vw;
+    font-size: min(2vw, 20px);
+    margin-right: 10vw;
 }
 .productone h3:nth-of-type(1){
     position: absolute;
-    top: 40%;
-    left: 55%;
+    top: 50%;
+    left: 50%;
 }
 .productone h3:nth-of-type(2){
     position: absolute;
-    top: 55%;
-    left: 80%;
-    font-size: 16px;
+    top: 70%;
+    left: 70%;
+    font-size: 1.8vw;
+    font-size: min(1.8vw, 16px);
 }
 .productone h3:nth-of-type(3){
     margin-left: 8vw;
@@ -100,107 +134,147 @@
     width: 40%;
     position: absolute;
     top: 40%;
-    left: 0;
+    left: 10%;
     transform: rotate(-120deg);
     opacity: .6;
 }
+
 /* ========第二區塊======== */
 .producttwo {
     display: flex;
     position: relative;
 }
 .producttwo img{
-    width: 60%;
+    width: 60vw;
     margin-left: auto;
 }
 .producttwo div{
-    position: absolute;
-    top:200px;
-    left: 8vw;
     background-color: rgba(255, 255, 255, 0.5);
     color: #141414;
     font-size: 16px;
-    padding: 20px;
+    padding: 2vw;
+    box-sizing: border-box;
+    width:60vw;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right:0;
+    margin: auto;
 }
 .producttwo h3{
-    font-size: 26px;
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 1vw;
+}
+/* ========第二區塊RWD======== */
+@media screen and (min-width: 1600px) {
+    .producttwo div{
+        width:600px;
+        top:20%;
+        left: 6vw;
+    }
+}
+@media screen and (max-width: 991.98px) {
+    .producttwo div{
+        width:80vw;
+    }
+    .producttwo h3{
+        font-size: 24px;
+        font-size: 3.2vw;
+        font-size: max(3.2vw, 16px);
+    }
+    .producttwo p{
+        font-size: 2.5vw;
+        font-size: max(2.5vw, 13px);
+    } 
 }
 /* ========第三區塊======== */
 .productthree {
     position: relative;
-    margin-top: 150px;
-    bottom: #fff;
+    margin-top: 30vw;
 }
 .productthree div:first-child{
     width: 44vw;
     height: 36vw;
     border-radius: 50%;
-    box-shadow: 0 0 30px 60px #1d1d1d inset;
+    box-shadow: 0 0 30px 60px #424242 inset;
     position: absolute;
     top:0;
     left: 6vw;    
     z-index: 1;
 }
-.productthree img:nth-of-type(1){
+.productthree >img:nth-of-type(1){
     width: 40vw;
     margin-left: 8vw; 
 }
-.productthree img:nth-of-type(2){
+.productthree >img:nth-of-type(2){
     width: 15vw;
     position: absolute;  
     top:30%;
     left:20vw;
-    z-index: 2;
-
+    z-index: 4;
 }
-.productthree img:nth-of-type(3){
+.wand1{
     transform: rotate(-123.28deg);
     position: absolute;
     top:-45%;
     width: 3vw;
+    z-index:5 ;
+}
+.productthree >img:last-of-type{
+    transform: rotate(-60deg);
+    position: absolute;
+    top:-5%;
+    width: 25vw;
     z-index:3 ;
 }
+
 .productthree p{
     color: #141414;
     text-shadow: 2px 2px 15px #cacaca;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1.8vw;
+    font-size: min(1.8vw, 16px);
     display: block;
-    width: 400px;
+    width: 25vw;
     position: absolute;
     top: 30%;
     left: 60vw;
 }
-/* ========第四區塊======== */
+/* ========第四區塊(繼承第二塊)======== */
 .productfour img{
-    margin-top:80px;
+    margin-top:8vw;
 }
 .productfour img{
     margin-left: 0;
 }
 .productfour div{
-    position: absolute;
-    top:350px;
-    left: 48vw;
+    top:30%;
+}
+/* ========第四區塊(繼承第二塊) RWD======== */
+@media screen and (min-width: 1600px) {
+    .productfour div{
+        top:60%;
+        left: 48vw;
+    }
+}
+@media screen and (max-width: 991.98px) {
+    .productfour div{
+        /* top: 30%; */
+    }
 }
 /* ========第五區塊======== */
 .productfive img:first-child{
-    width: 100%;
-    margin-top: 100px;
+    width: 100vw;
+    margin-top: 5vw;
 }
 .productfive p{
     font-size: 20px;
+    font-size: min(max(4vw, 16px), 20px);
     text-align: center;
     margin: 50px auto 20px;
 }
 .float{
     display: block;
     margin:0 auto;
-}
-/* ========魔杖移動======== */
-.wand1{
-    transform: translate(0, 0);
-    background-color: transparents;
 }
