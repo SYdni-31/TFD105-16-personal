@@ -2,35 +2,35 @@
 /* ========常見問題 */
 .faqmod{
     display: block;
-    width: 80%;
+    width: 80vw;
     margin: 30px auto 0;
     border-bottom: 2px solid #B69452;
     margin-bottom: 60px;
 }
 h3{
     font-size: 32px;
+    font-size: max(min(4.2vw, 32px), 20px);
     font-weight: bold;
     text-align: center;
     margin-bottom: 40px;
 }
 .ansmod label{
-    display: block;
-    width: 100%;
+    display:inline-block;
+    width: calc(100% - 40px);
+    padding: 0 30px;
     font-size: 20px;
-    border-top: 2px solid #B69452;
     box-sizing: border-box;
-    padding: 10px 20px ;
     transition: .5s;
 }
 .ansmod label:hover{
     color: #B69452;
 }
 .anscontent{
-    font-style: 20px;
+    font-size: 14px;
     box-sizing: border-box;
-    padding: 10px 30px;
-    line-height: 2;
+    line-height: 1.5;
     height: 0px;
+    overflow: hidden;
     opacity: 0;
     transition: .5s;
 }
@@ -44,32 +44,29 @@ input[type="radio"]{
 }
 /* =======手風琴切換+-切換======== */
 .ansbox{
-    position: relative;
+    border-top: 2px solid #B69452;
+    padding: 10px 0;
 }
-.ansbox:before{
-    content: '';
-    display: block;
+.ansbox > span{
+    display: inline-block;
     width: 30px;
     height: 5px;
+    margin: auto 0;
     background-color: #B69452;
     border-radius: 555px;
-    position: absolute;
-    top:70%;
-    left: 95%;
+    transform: translateY(-50%);
+    position: relative;
 }
-.ansbox span{
+.ansbox span span{
     display: block;
     width: 5px;
     height: 30px;
     background-color: #B69452;
     border-radius: 555px;
     position: absolute;
-    top:41%;
-    left: 96.2%;
+    top:-12.5px;
+    left:12.5px;
     transition: .5s;
-}
-.ansbox:hover span{
-    transform: rotate(90deg);
 }
 /* ========提問區======== */
 .inputbox{
@@ -78,7 +75,7 @@ input[type="radio"]{
 }
 .inputbox label{
     font-size: 18px;
-    display: block;
+    display:inline-block;
     margin-top: 30px;
     padding-left: 10px;
 }
@@ -94,7 +91,7 @@ input[type="radio"]{
     outline-style: none ;
 }
 .inputbox div input:focus{
-    box-shadow: 3px 3px#cacaca;
+    box-shadow: 8px 8px#141414;
 }
 .inputbox div:nth-of-type(-n+2){
     display: inline-block;
@@ -118,9 +115,10 @@ input[type="radio"]{
     color: #141414;
     outline-style: none;
     overflow: hidden;
+    resize: none;
 }
 .inputbox div textarea:focus{
-    box-shadow: 3px 3px#cacaca;
+    box-shadow: 8px 8px#141414;
 }
 .inputbox > input{
     display: block;

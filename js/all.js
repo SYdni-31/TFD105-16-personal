@@ -108,8 +108,8 @@ $(function(){
     /* =======手風琴切換+-切換======== */
     $(function(){
         $(".ansbox").click(function(){
-            $(this).find('span').animate({opacity:0})
-            $(this).parents().siblings().find('span').animate({opacity:1},300)
+            $(this).find('span > span').css("transform", "rotate(90deg)")
+            $(this).siblings().find('span > span').css("transform", "rotate(0deg)")
         });
     });
     // ========登入視窗========
