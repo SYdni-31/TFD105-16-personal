@@ -258,11 +258,6 @@
         left: 48vw;
     }
 }
-@media screen and (max-width: 991.98px) {
-    .productfour div{
-        /* top: 30%; */
-    }
-}
 /* ========第五區塊======== */
 .productfive img:first-child{
     width: 100vw;

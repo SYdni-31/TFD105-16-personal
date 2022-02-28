@@ -111,9 +111,6 @@
         height: 45vw;
         left:10vw;
     }
-    /* .aboutone > img{
-        height: 30vw;
-    } */
     .aboutone h2{
         width: 29vw;
         font-size: 3.8vw;
@@ -121,7 +118,7 @@
         line-height: max(4vw, 20px);
     }
     .aboutone div >p{
-        font-size: 2vw;
+        font-size: 3vw;
         font-size: max(3vw, 13px);
     }
     .aboutone a{
