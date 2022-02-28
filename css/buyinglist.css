@@ -37,6 +37,7 @@
     padding: 10px;
     box-sizing: border-box;
     margin-bottom: 40px;
+    background-color: #383838;
 }
 .list div{
     display: inline-block;

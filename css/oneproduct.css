@@ -163,8 +163,14 @@
 }
 .producttwo h3{
     font-size: 24px;
+    font-size: 3.2vw;
+    font-size: min(max(3.2vw, 16px),24px);
     font-weight: bold;
     margin-bottom: 1vw;
+}
+.producttwo p{
+    font-size: 16px;
+    font-size: min(max(3vw, 13px), 16px);
 }
 /* ========第二區塊RWD======== */
 @media screen and (min-width: 1600px) {
@@ -179,13 +185,10 @@
         width:80vw;
     }
     .producttwo h3{
-        font-size: 24px;
-        font-size: 3.2vw;
-        font-size: max(3.2vw, 16px);
+        font-size: 16px;
     }
     .producttwo p{
-        font-size: 2.5vw;
-        font-size: max(2.5vw, 13px);
+        font-size: 13px;
     } 
 }
 /* ========第三區塊======== */
@@ -233,7 +236,7 @@
     color: #141414;
     text-shadow: 2px 2px 15px #cacaca;
     font-weight: bold;
-    font-size: 1.8vw;
+    font-size: 16px;
     font-size: min(1.8vw, 16px);
     display: block;
     width: 25vw;

@@ -47,11 +47,15 @@
 }
 .indexone div h2{
     font-size: 32px;
+    font-size:5vw;
+    font-size: min(max(5vw, 20px), 32px);
     margin-top:40px;
     font-weight: bold;
 }
 .indexone div > p{
-    font-size: 14px;
+    font-size: 16px;
+    font-size: 3vw;
+    font-size: min(max(3vw, 14px), 16px);
     line-height: 1.2;
     margin-top:5em;
     margin-bottom:10em;
@@ -173,13 +177,9 @@
         margin-top: 5vw;
     }
     .indexone div h2{
-        font-size:4vw;
-        font-size: max(4vw, 20px);
         text-align: center;
     }
     .indexone div > p{
-        font-size: 3vw;
-        font-size: max(3vw, 14px);
         margin:5vw;
         border-left: 2px solid #B69452;
     }
@@ -207,11 +207,15 @@
 }
 .indextwo h2{
     font-size: 32px;
+    font-size:5vw;
+    font-size: min(max(5vw, 20px), 32px);
     margin-top:40px;
     font-weight: bold;
 }
 .indextwo div > p{
-    font-size: 14px;
+    font-size: 16px;
+    font-size: 3vw;
+    font-size: min(max(3vw, 14px), 16px);
     line-height: 1.2;
     margin-top:5em;
     margin-bottom:10em;
@@ -308,13 +312,9 @@
         margin-top: 5vw;
     }
     .indextwo div h2{
-        font-size:4vw;
-        font-size: max(4vw, 20px);
         text-align: center;
     }
     .indextwo div > p{
-        font-size: 3vw;
-        font-size: max(3vw, 14px);
         margin:5vw;
         border-right: 2px solid #B69452;
     }

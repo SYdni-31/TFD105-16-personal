@@ -162,3 +162,7 @@ $(document).mouseup(function(e){
     });
     
   });
+// ========loading page========
+window.addEventListener("load", function(){
+    document.getElementsByClassName("loadingblock")[0].remove();
+  });
