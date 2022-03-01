@@ -166,4 +166,11 @@ $(document).mouseup(function(e){
 window.addEventListener("load", function(){
     document.getElementsByClassName("loadingblock")[0].remove();
   });
-
+// ========購物車點點========
+document.addEventListener("DOMContentLoaded", function(){
+    let wandlists = JSON.parse(localStorage.getItem("wandlists"));
+    if(wandlists===null){}else{
+        let length= wandlists.length
+        $(".buyingdot").css("display", "block").text(length)
+    }
+});

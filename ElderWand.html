@@ -132,18 +132,15 @@
                 "core": "騎士墮鬼馬尾羽",
                 "pic": "img/products/1.2_Dumbledore.png"
             };
-            let lists = JSON.parse(localStorage.getItem("lists"));
-            if(lists){ 
-                lists.unshift(list);
+            let wandlists = JSON.parse(localStorage.getItem("wandlists"));
+            if(wandlists){ 
+                wandlists.unshift(list);
             }else{ 
-                lists = [list];
+                wandlists = [list];
             }
-            localStorage.setItem("tasks", JSON.stringify(tasks));
-            $(".buyingcar").append(tasks.length)
-            // </i><span class="buyingdot">2</span>
-            // 從標籤抓資訊後，放進localstorage
-            // 從localstorage動態綁定更新小圓點上的數字(要設animation)
-            // 購物車頁面要加上預先更新我的localstorage資料
+            localStorage.setItem("wandlists", JSON.stringify(wandlists));
+            let length= wandlists.length
+            $(".buyingdot").css("display", "block").text(length)
 
         })
     </script>

@@ -29,6 +29,12 @@
     border-bottom:2px solid #B69452;
     position: relative;
 }
+.buyinglistmain > p{
+    font-size: 20px;
+    text-align: center;
+    line-height: 300px;
+    font-weight: bold;
+}
 /* ========清單內容======== */
 .list{
     width: 100%;
@@ -38,6 +44,7 @@
     box-sizing: border-box;
     margin-bottom: 40px;
     background-color: #383838;
+    transition: opacity 1s;
 }
 .list div{
     display: inline-block;
@@ -92,6 +99,10 @@
         margin-top: 20px;
         padding-bottom: 30px;
     }
+}
+/* ======移除清單====== */
+.list.fade_out{
+    opacity: 0;
 }
 /* ========總計========== */
 .listtotal{
