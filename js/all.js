@@ -173,6 +173,8 @@ document.addEventListener("DOMContentLoaded", function(){
         let length= wandlists.length
         if(length==0){
             $(".buyingdot").css("display", "none")
+        }else if(length>=10){
+            $(".buyingdot").css("display", "block").text("9+")
         }else{
             $(".buyingdot").css("display", "block").text(length)
         }

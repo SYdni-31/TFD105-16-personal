@@ -135,13 +135,14 @@
                     if(length==0){
                         $(".buyinglistmain").prepend("<p>購物清單裡什麼都沒有</p>")
                         $(".buyingdot").css("display", "none")
+                    }else if(length>=10){
+                        $(".buyingdot").css("display", "block").text("9+")
                     }else{
                         $(".buyingdot").css("display", "block").text(length)
                     }
                 }
             }
         })
-
     </script>
 </body>
 </html>

@@ -123,8 +123,8 @@
     <script src="js/all.js"></script>
     <script>
         // ====== 小圓點for 購物車 ======
-        let item_id = Date.now()
         $(".addlist").click(function(){
+            let item_id = Date.now()
             let list = {
                 "id": item_id,
                 "name": "接骨木魔杖",
@@ -142,7 +142,13 @@
             }
             localStorage.setItem("wandlists", JSON.stringify(wandlists));
             let length= wandlists.length
-            $(".buyingdot").css("display", "block").text(length)
+            if(length==0){
+                $(".buyingdot").css("display", "none")
+             }else if(length>=10){
+                $(".buyingdot").css("display", "block").text("9+")
+            }else{
+                $(".buyingdot").css("display", "block").text(length)
+            }
 
         })
     </script>
