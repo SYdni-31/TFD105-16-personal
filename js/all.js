@@ -166,3 +166,4 @@ $(document).mouseup(function(e){
 window.addEventListener("load", function(){
     document.getElementsByClassName("loadingblock")[0].remove();
   });
+

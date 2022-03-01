@@ -29,7 +29,7 @@
             <li><a href="faq.html">常見問題</a></li>
         </ul>
     </div>
-    <a href="buyinglist.html"><i class="fas fa-feather-alt"></i></a>
+    <a class= "buyingcar" href="buyinglist.html"><i class="fas fa-feather-alt"></i><span class="buyingdot"></span></a>
     <button type="button" class="hamburger hamburger-act">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -41,8 +41,8 @@
   <!-- 商品頁籤 -->
     <section class=" productname">
         <h1>接骨木魔杖</h1>
-        <a href="buyinglist.html">加入清單 ></a>
-        <a href="buyinglist.html">直接訂購 ></a>
+        <a class="addlist" href="#">加入清單 ></a>
+        <a class="addlist" href="buyinglist.html">直接訂購 ></a>
     </section>
   <!-- 第一區塊 -->
     <section class="productone">
@@ -84,7 +84,11 @@
     <p>立即前往購買<br>或到服務據點了解詳情</p>
     <img class="float" src="img/downarr.png" alt="">
     </section>
-
+     <!-- loading -->
+     <div class="loadingblock">
+        <img src="img/loading.svg" alt="">
+        <p>Loading...</p>
+    </div>
   <!-- 底端footer -->
     <footer class="bottom">
         <h2>服務據點</h2>
@@ -117,5 +121,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="js/all.js"></script>
+    <script>
+        // ====== 小圓點for 購物車 ======
+        $(".addlist").click(function(){
+            let list = {
+                "name": "接骨木魔杖",
+                "maker": "不明",
+                "size": "15英吋",
+                "wood": "接骨木",
+                "core": "騎士墮鬼馬尾羽",
+                "pic": "img/products/1.2_Dumbledore.png"
+            };
+            let lists = JSON.parse(localStorage.getItem("lists"));
+            if(lists){ 
+                lists.unshift(list);
+            }else{ 
+                lists = [list];
+            }
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+            $(".buyingcar").append(tasks.length)
+            // </i><span class="buyingdot">2</span>
+            // 從標籤抓資訊後，放進localstorage
+            // 從localstorage動態綁定更新小圓點上的數字(要設animation)
+            // 購物車頁面要加上預先更新我的localstorage資料
+
+        })
+    </script>
 </body>
 </html>
