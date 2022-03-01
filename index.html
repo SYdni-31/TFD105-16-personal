@@ -208,6 +208,16 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+document.addEventListener("scroll", function(){
+    if(window.scrollY >= 100 && window.scrollY <300){
+        $(".indexone img").addClass("rightslide")
+    }else if(window.scrollY >= 300){
+        $(".indextwo img").addClass("leftslide")
+    }else{
+        $(".indextwo img").removeClass("leftslide")
+        $(".indexone img").removeClass("rightslide")
+    }
+})
     </script>
 </body>
 </html>

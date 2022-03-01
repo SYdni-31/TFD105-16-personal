@@ -690,3 +690,28 @@ body{
         transform: scale(1);
     }
 }
+/* ======圖片滑動====== */
+@keyframes rightslide {
+    0%{
+        transform: translateX(10vw);
+        opacity: 0;
+    }100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.rightslide{
+    animation: rightslide 1.5s;
+}
+.leftslide{
+    animation: leftslide 1.5s;
+}
+@keyframes leftslide {
+    0%{
+        transform: translateX(-10vw);
+        opacity: 0;
+    }100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
