@@ -171,6 +171,10 @@ document.addEventListener("DOMContentLoaded", function(){
     let wandlists = JSON.parse(localStorage.getItem("wandlists"));
     if(wandlists===null){}else{
         let length= wandlists.length
-        $(".buyingdot").css("display", "block").text(length)
+        if(length==0){
+            $(".buyingdot").css("display", "none")
+        }else{
+            $(".buyingdot").css("display", "block").text(length)
+        }
     }
 });

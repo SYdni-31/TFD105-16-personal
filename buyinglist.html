@@ -95,13 +95,13 @@
     <script>
         document.addEventListener("DOMContentLoaded", function(){
             let wandlists = JSON.parse(localStorage.getItem("wandlists"));
-            if(wandlists===null){
+            if(wandlists===null || wandlists.length==0){
                 $(".buyinglistmain").prepend("<p>購物清單裡什麼都沒有</p>")
                 $(".sum").text("0")
             }else{
                 let length= wandlists.length
                 for(let i=0; i<length; i++){
-                    $(".buyinglistmain").prepend(`<section class="list" >
+                    $(".buyinglistmain").prepend(`<section class="list" wandid= "${wandlists[i].id}" >
                         <div>
                         <img src="${wandlists[i].pic}" alt="">
                         <button class="btn_delete">刪除</button>
@@ -123,9 +123,24 @@
             if(e.target.classList.contains("btn_delete")){ 
                 e.target.closest("section").classList.add("fade_out") 
                 setTimeout(()=>{e.target.closest("section").remove()},800)
+                let delete_target_id=e.target.closest("section").getAttribute("wandid");
+
+                let wandlists = JSON.parse(localStorage.getItem("wandlists"));
+                for(let i=0; i<wandlists.length; i++){
+                    if(wandlists[i].id==delete_target_id){
+                        wandlists.splice(i, 1)
+                        localStorage.setItem("wandlists", JSON.stringify(wandlists));
+                    }
+                    let length= wandlists.length
+                    if(length==0){
+                        $(".buyingdot").css("display", "none")
+                    }else{
+                        $(".buyingdot").css("display", "block").text(length)
+                    }
+                }
             }
         })
-                
+
     </script>
 </body>
 </html>
