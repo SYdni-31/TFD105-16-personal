@@ -50,6 +50,7 @@
    justify-content: space-between;
 }
 .userbutton li a{
+    display: block;
     text-decoration: none;
     color: #cacaca;
     text-align: center;
@@ -65,4 +66,16 @@
 .userbutton li a:hover{
     color: #B69452;
     font-weight: bold;
+}
+@media screen and (max-width:767.98px){
+    .userbutton ul{
+        flex-wrap: wrap;
+     }
+     .userbutton ul li{
+        width: 50%;
+     }
+     .userbutton li a i{
+        font-size: 20vw;
+        margin-bottom: 4vw;
+    }
 }

@@ -118,7 +118,7 @@
     font-weight: bold;
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: 20px;
     transform: translate(-50%);
 }
 .listtotal h3{
@@ -126,12 +126,6 @@
 }
 .listtotal p{
     font-size: 32px;
-}
-/* ========總計 RWD========== */
-@media screen and (max-width:991.98px){
-    .listtotal{
-        /* bottom: -2%; */
-    }
 }
 /* ========底下按鈕======== */
 .buyinglistbtn{
