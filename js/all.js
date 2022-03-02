@@ -105,13 +105,8 @@ $(function(){
         scrub: true, // 物件動畫根據卷軸捲動程度跑
       }
     });
-    /* =======手風琴切換+-切換======== */
-    $(function(){
-        $(".ansbox").click(function(){
-            $(this).find('span > span').css("transform", "rotate(90deg)")
-            $(this).siblings().find('span > span').css("transform", "rotate(0deg)")
-        });
-    });
+
+
     // ========登入視窗========
     let loginnav = document.getElementsByClassName('loginnav')[0];
     let loginbg = document.getElementsByClassName('loginbg')[0];
