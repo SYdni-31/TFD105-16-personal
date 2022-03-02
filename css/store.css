@@ -102,9 +102,19 @@
 @media screen and (max-width: 992px){
     .storecategory>ul{
         overflow-x: auto;
-        scrollbar-color:#cacaca;
+        overflow-y:hidden ;
         touch-action: pan-x;
     }
+    .storecategory>ul::-webkit-scrollbar {
+        height: 5px;
+      }
+    .storecategory>ul::-webkit-scrollbar-track {
+        
+    }
+    .storecategory>ul::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px; 
+      }
     .categorysecond{
         position: absolute;
         right: 0;

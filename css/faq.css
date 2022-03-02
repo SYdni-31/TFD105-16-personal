@@ -35,11 +35,11 @@ h3{
     transition: .5s;
 }
 /* =======手風琴切換======== */
-input[type="radio"]:checked + .anscontent{
+input[type="checkbox"]:checked + .anscontent{
     opacity: 1;
     height: 150px;
 }
-input[type="radio"]{
+input[type="checkbox"]{
     display: none;
 }
 /* =======手風琴切換+-切換======== */
