@@ -4,7 +4,7 @@
     background-image: url(../img/index-bg-full.jpg);
     width: 100%;
     height: 500px;
-    opacity:.8;
+    opacity:.6;
     background-size: 100% auto;
     background-position: center;
     font-size: 0px;
@@ -14,12 +14,10 @@
 .indextop h1{
     display:inline-block;
     padding-top: 200px;
-    width: 40%;
-    font-size: 4vw;
-    font-size: max(4vw, 16px);
+    width: 50%;
     color:#B69452;
     font-weight: bold;
-    text-shadow: 1px 1px 10px #141414;
+    text-shadow: 1px 1px #141414;
 }
 /* ========top區塊 RWD======== */
 @media screen and (max-width: 768px)  {
@@ -27,7 +25,7 @@
         height: 200px;
     }
     .indextop h1{
-        padding-top: 100px;
+        padding-top: 120px;
     }
 }
 /* ========第一區塊======== */
@@ -46,17 +44,17 @@
     padding-right:10vw;
 }
 .indexone div h2{
-    font-size: 32px;
+    /* font-size: 32px;
     font-size:5vw;
-    font-size: min(max(5vw, 20px), 32px);
+    font-size: min(max(5vw, 20px), 32px); */
     margin-top:40px;
     font-weight: bold;
 }
-.indexone div > p{
-    font-size: 16px;
+.indexone div h4{
+    /* font-size: 16px;
     font-size: 3vw;
     font-size: min(max(3vw, 14px), 16px);
-    line-height: 1.2;
+    line-height: 1.2; */
     margin-top:5em;
     margin-bottom:10em;
     padding:0 2vw;
@@ -75,7 +73,7 @@
 }
 /* ======第一區塊a hover&RWD====== */
 .indexone a p{
-    background-color: #424242;
+    background-color: #141414;
     display: inline-block;
     width: 90px;
     padding:0 15px 0 10px;
@@ -179,7 +177,7 @@
     .indexone div h2{
         text-align: center;
     }
-    .indexone div > p{
+    .indexone div h4{
         margin:5vw;
         border-left: 2px solid #B69452;
     }
@@ -206,17 +204,17 @@
     order:1;
 }
 .indextwo h2{
-    font-size: 32px;
+    /* font-size: 32px;
     font-size:5vw;
-    font-size: min(max(5vw, 20px), 32px);
+    font-size: min(max(5vw, 20px), 32px); */
     margin-top:40px;
     font-weight: bold;
 }
-.indextwo div > p{
-    font-size: 16px;
+.indextwo div h4{
+    /* font-size: 16px;
     font-size: 3vw;
     font-size: min(max(3vw, 14px), 16px);
-    line-height: 1.2;
+    line-height: 1.2; */
     margin-top:5em;
     margin-bottom:10em;
     padding:0 2vw;  
@@ -237,7 +235,7 @@
 }
 /* ======第二區塊a hover &RWD====== */
 .indextwo a p{
-    background-color: #424242;
+    background-color: #141414;
     display: inline-block;
     width: 90px;
     padding:0 5px 0 15px;
@@ -314,7 +312,7 @@
     .indextwo div h2{
         text-align: center;
     }
-    .indextwo div > p{
+    .indextwo div h4{
         margin:5vw;
         border-right: 2px solid #B69452;
     }

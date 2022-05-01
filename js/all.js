@@ -1,24 +1,42 @@
-// ========nav透明度設定========
-window.addEventListener('scroll', function (e) {
+document.addEventListener("DOMContentLoaded", function(){
+    // ========nav hamburger========
+    let hamburger= document.getElementsByClassName("hamburger")[0]
+    let nav_main= document.getElementsByClassName("nav_main")[0]
     let nav = document.getElementsByClassName('nav')[0];
-    if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
-            nav.classList.add('nav-colored');
-        } else {
-               nav.classList.remove('nav-colored');
-        }
-});
-// ========nav hamburger========
-$(function(){
-    $("button.hamburger").on("click", function(){
-      $(".nav_main").slideToggle();
-      let nav = document.getElementsByClassName('nav')[0];
-      nav.classList.add('nav-colored');
+    hamburger.addEventListener("click", function(){
+        nav_main.classList.toggle("nav-act")
+        nav.classList.add('nav-colored');
     });
-  });
-// ========back to top設定========
-	$('.gototopbtn').click(function(){ 
-		$('html,body').animate({scrollTop:0}, 500);
-	});
+
+    // ========nav透明度設定========
+    window.addEventListener('scroll', function (e) {
+        let nav = document.getElementsByClassName('nav')[0];
+        if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
+            nav.classList.add('nav-colored');
+        } else if(nav_main.classList.contains("nav-act")){
+            nav.classList.add('nav-colored');
+        }else{
+            nav.classList.remove('nav-colored');
+        }
+    });
+    // ========back to top設定========
+    let gototopbtn=document.getElementsByClassName("gototopbtn")[0]
+    gototopbtn.addEventListener("click",function(e){
+        e.preventDefault()
+        goToTop()
+    })
+})
+// ========back to top function========
+function goToTop(destination = 0, duration = 300) {
+    const scrollStep = -window.scrollY / (duration / 15)
+    const scrollInterval = setInterval(function () {
+      if (window.scrollY != 0 && window.scrollY > destination) {
+        window.scrollBy(0, scrollStep)
+      } else {
+        clearInterval(scrollInterval)
+      }
+    }, 15)
+  }
 // // ========進一步選購滑動設定========
 // $(document).ready(function(){ 
 //     let index = 0;
@@ -42,70 +60,6 @@ $(function(){
 //         }
 //     });
 //    });
-
-
-// ========第一排商品列表區域切換========
-$(function(){
-    $(".storecategory >ul >li").click(function(){
-        $(this).addClass("on");
-        $(this).find("li").removeClass("on");
-        $(this).siblings().removeClass("on");
-        $(this).siblings().find("li").removeClass("on");
-        let store=$(this).index();
-        $(".store1").eq(store).show();
-        $(".store1").eq(store).siblings().hide();
-        $(".store1in1").eq().hide();
-        $(".store1in2").eq().hide();
-    });
-   });
-
-   // ========第二排之一商品列表區域切換========
-   $(function(){
-    $(".categorysecond1 > li").click(function(){
-        $(this).parents().addClass("on");
-        $(this).parents().siblings().removeClass("on");
-        $(this).parents().siblings().find("li").removeClass("on");
-        $(this).addClass("on"); 
-        $(this).siblings().removeClass("on");
-        let store1in1=$(this).index();
-        $(".store1in1").eq(store1in1).show();
-        $(".store1in1").eq(store1in1).siblings().hide();
-        $(".store1").eq().hide();
-        $(".store1in2").eq().hide();
-        return false
-        });
-   });
-      // ========第二排之一商品列表區域切換========
-      $(function(){
-        $(".categorysecond2 > li").click(function(){
-            $(this).parents().addClass("on");
-            $(this).parents().siblings().removeClass("on");
-            $(this).parents().siblings().find("li").removeClass("on");
-            $(this).addClass("on"); 
-            $(this).siblings().removeClass("on");
-            let store1in2=$(this).index();
-            $(".store1in2").eq(store1in2).show();
-            $(".store1in2").eq(store1in2).siblings().hide();
-            $(".store1").eq().hide();
-            $(".store1in1").eq().hide();
-            return false
-            });
-       });
-
-    // ========商品專頁滑動========
-    let endvw =document.body.offsetWidth*1.05;
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(".wand1", { 
-        rotation: 120,//最後旋轉程度deg
-        scrollTrigger: {
-        trigger: ".wand1",
-        start: `-200 top`, // (物件開始位置, 卷軸開始位置)
-        end: `+=${endvw}`, //(物件結束位置, 卷軸結束位置)
-        pin: true, // 物件執行完動畫會跟著卷軸走
-        scrub: true, // 物件動畫根據卷軸捲動程度跑
-      }
-    });
-
 
     // ========登入視窗========
     let loginnav = document.getElementsByClassName('loginnav')[0];

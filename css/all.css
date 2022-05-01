@@ -4,7 +4,34 @@ html{
 }
 body{
     color:#cacaca;
-    background-color:#424242;
+    background-color:#141414;
+    line-height: 1.6;
+}
+h1{
+    font-size: 48px;
+}
+h2{
+    font-size: 36px;
+}
+h3{
+    font-size: 24px;
+}
+h4{
+    font-size: 16px;
+}
+@media screen and (max-width: 768px)  {
+    h1{
+        font-size: 28px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    h4{
+        font-size: 18px;
+    }
+    h4{
+        font-size: 14px;
+    }
 }
 /* ==========頂端nav======== */
 .head{
@@ -166,9 +193,14 @@ body{
 }
 @media screen and (max-width: 767px){
     div.nav_main{
-        display: none;
+        transform: translateX(-100%);
+        /* display: none; */
         width: 100vw;
-        order:4 
+        order:4; 
+        transition: .5s;
+    }
+    div.nav_main.nav-act{
+        transform: translateX(0);
     }
     div.nav_main ul{
         display: block;
@@ -214,8 +246,8 @@ body{
     width: 80vw;
 }
 .gotoshop h2{
-    font-size: 4vw;
-    font-size:  min(max(4vw,20px), 32px);
+    /* font-size: 4vw;
+    font-size:  min(max(4vw,20px), 32px); */
     
     margin-bottom: 5vh;
     font-weight: bold;
@@ -255,9 +287,9 @@ body{
     font-weight: bold;
 }
 .gotoshopitem h3{
-    font-size: 24px;
+    /* font-size: 24px;
     font-size: 3vw;
-    font-size: min(max(3vw, 16px), 20px);
+    font-size: min(max(3vw, 16px), 20px); */
     font-weight: bold;
     margin-bottom:10%;
 }
@@ -383,8 +415,8 @@ body{
     padding-top: 20px;
 }
 .bottom h2{
-    font-size:4vw;
-    font-size: min(max(4vw, 20px), 32px);
+    /* font-size:4vw;
+    font-size: min(max(4vw, 20px), 32px); */
     text-align: center;
     margin:30px auto;
 }
@@ -407,17 +439,17 @@ body{
 }
 .bottom li p{
     margin:0 auto;
+    text-align: center;
     font-size: 16px;
-    font-size: 3vw;
-    font-size: min(max(3vw, 12px), 16px);
+    /* font-size: 3vw;
+    font-size: min(max(3vw, 12px), 16px); */
     line-height: 1.6;
 }
 .bottom li p:nth-child(-n+2){
     color:#B69452;
-    text-align: center;
     font-size: 18px;
-    font-size:3.2vw;
-    font-size: min(max(3.2vw, 14px), 18px);
+    /* font-size:3.2vw;
+    font-size: min(max(3.2vw, 14px), 18px); */
     margin-bottom:20px;
     font-weight: bold;      
 }
@@ -440,6 +472,12 @@ body{
 @media screen and (max-width: 767.98px){
     .gototopbtn img:first-child{
         opacity:1 ;
+    }
+    .bottom li p{
+        font-size: 12px;
+    }
+    .bottom li p:nth-child(-n+2){
+        font-size: 14px;   
     }
 }
 .float{
