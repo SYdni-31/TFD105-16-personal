@@ -8,8 +8,8 @@
     margin-bottom: 60px;
 }
 h3{
-    font-size: 32px;
-    font-size: max(min(4.2vw, 32px), 20px);
+    /* font-size: 32px;
+    font-size: max(min(4.2vw, 32px), 20px); */
     font-weight: bold;
     text-align: center;
     margin-bottom: 40px;
@@ -26,7 +26,6 @@ h3{
     color: #B69452;
 }
 .anscontent{
-    font-size: 14px;
     box-sizing: border-box;
     line-height: 1.5;
     height: 0px;
@@ -91,7 +90,7 @@ input[type="checkbox"]{
     outline-style: none ;
 }
 .inputbox div input:focus{
-    box-shadow: 8px 8px#141414;
+    box-shadow: 8px 8px #141414;
 }
 .inputbox div:nth-of-type(-n+2){
     display: inline-block;
@@ -118,7 +117,7 @@ input[type="checkbox"]{
     resize: none;
 }
 .inputbox div textarea:focus{
-    box-shadow: 8px 8px#141414;
+    box-shadow: 8px 8px #141414;
 }
 .inputbox > input{
     display: block;

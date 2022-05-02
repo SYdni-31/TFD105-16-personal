@@ -262,8 +262,11 @@
     }
 }
 /* ========第五區塊======== */
+.productfive{
+    width: 100%;
+}
 .productfive img:first-child{
-    width: 100vw;
+    width: 100%;
     margin-top: 5vw;
 }
 .productfive p{
