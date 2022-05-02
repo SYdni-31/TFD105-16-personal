@@ -12,24 +12,25 @@
 }
 .abouttop h1{
     display:inline-block;
-    width: 40%;
-    font-size: 4vw;
+    width: 50%;
+    /* font-size: 4vw; */
     color:#141414;
     font-weight: bold;
     text-shadow: 5px 5px 10px #cacaca59;
     padding-top: 200px;
 }
 .abouttop img{
-    display:inline-block;
+    display:block;
     width: 10%;
     margin:0 auto;
-    padding-top: 100px;
+    /* padding-top: 100px; */
 }
 .abouttop p{
-    font-size: 2vw;
-    font-size: max(2vw, 12px);
+    /* font-size: 2vw;
+    font-size: max(2vw, 12px); */
+    font-size: 16px;
     color:#141414;
-    margin: 20px auto 0 auto;
+    margin: 0 auto;
     text-decoration:underline
 }
 
@@ -39,13 +40,13 @@
         height: 200px;
     }
     .abouttop h1{
-        padding-top: 80px;
+        padding-top: 60px;
     }
     .abouttop img{
-        display:inline-block;
+        display:block;
         width: 10%;
         margin:0 auto;
-        padding-top: 60px;
+        /* padding-top: 60px; */
     }
 }
 
@@ -53,7 +54,7 @@
 .aboutone{
     display: flex;
     position: relative;
-    margin-bottom: calc(15vw + 10vh);
+    margin-bottom: calc(18vw + 10vh);
 }
 .aboutone > img{
     width: 60vw;
@@ -67,19 +68,24 @@
     height: 30vw;
     border:2px solid #B69452;
     position: absolute;
-    top:15vw;
+    top:18vw;
     left:15vw;
     margin-left: auto;
 }
 .aboutone h2{
     display: block;
     width: 25vw;
-    font-size: 32px;
+    /* font-size: 32px;
     font-size:5vw;
-    font-size: min(max(5vw, 20px), 32px);
+    font-size: min(max(5vw, 20px), 32px); */
     text-align: center;
-    padding: 6vw 0 1vw 0;
-    line-height: 4vw;
+    padding-bottom: 1vw;
+    /* line-height: 4vw; */
+}
+.aboutone h2:first-child{
+    padding-top: 6vw;
+    padding-bottom: 0;
+
 }
 .aboutone div >p{
     font-size: 16px;
@@ -90,7 +96,7 @@
 .aboutone a{
     color: #cacaca;
     background-image: url(../img/b_btn.png);
-    background-color: #424242;
+    background-color: #141414;
     display:block;
     width: 220px;
     height: 60px;
@@ -98,12 +104,13 @@
     text-decoration: none;
     font-size: 20px;
     position:absolute;
-    top:37.5vw;
+    top:45vw;
     left:70vw;
 }
 /* ========第一三區塊 RWD======== */
 @media screen and (min-width: 1600px) {
     .aboutone a{
+        top:40vw;
         left: 60vw;
     }
 }
@@ -112,25 +119,44 @@
         margin-bottom: calc(30vw + 10vh + 60px);
     }
     .aboutone div{
+        border-bottom: 0;
         width: 80vw;
         height: 45vw;
         left:10vw;
     }
     .aboutone h2{
         width: 29vw;
-        font-size: 3.8vw;
+        /* font-size: 3.8vw;
         font-size: max(3.8vw, 18px);
-        line-height: max(4vw, 20px);
+        line-height: max(4vw, 20px); */
     }
     .aboutone a{
         top:60vw;
-        left: 14vw;
-        font-size: min(4vw, 20px);
+        left: 12vw;
+    }
+}
+@media screen and (max-width: 575.98px) {
+    .aboutone{
+        margin-bottom: calc(60vw + 10vh + 60px);
+    }
+    .aboutone div{
+        width: 80vw;
+        height: 75vw;
+        left:10vw;
+    }
+    .aboutone h2{
+        display: inline-block;
+        width: 50%;
+        padding-top: 15vw;
+    }
+    .aboutone a{
+        top:85vw;
+        left: 15vw;
     }
 }
 /* ======第一三區塊a hover &RWD====== */
 .aboutone a p{
-    background-color: #424242;
+    background-color: #141414;
     display: inline-block;
     width: 90px;
     padding:0 15px 0 5px;
@@ -147,7 +173,7 @@
 @media screen and (max-width: 991.98px) {
     .aboutone a p{
         animation: aboutoneauto 3s infinite;
-        font-size: min(4vw, 20px);
+        font-size:20px;
     }
     @keyframes aboutoneauto {
         0%{
@@ -194,7 +220,7 @@
 .abouttwo{
     display: flex;
     position: relative;
-    margin-bottom: calc(15vw + 10vh);
+    margin-bottom: calc(18vw + 10vh);
 }
 .abouttwo > img{
     width: 60vw;
@@ -207,19 +233,24 @@
     height: 30vw;
     border:2px solid #B69452;
     position: absolute;
-    top:15vw;
+    top:18vw;
     right:15vw;
 }
 .abouttwo h2{
     display: block;
     width: 25vw;
-    font-size: 32px;
+    /* font-size: 32px;
     font-size:5vw;
-    font-size: min(max(5vw, 20px), 32px);
+    font-size: min(max(5vw, 20px), 32px); */
     text-align: center;
     margin-left: 40vw;
-    padding: 6vw 0 1vw 0;
-    line-height: 4vw;
+    padding-bottom: 1vw;
+    /* line-height: 4vw; */
+}
+.abouttwo h2:first-child{
+    padding-top: 6vw;
+    padding-bottom: 0;
+
 }
 .abouttwo div >p{
     font-size: 16px;
@@ -230,7 +261,7 @@
 .abouttwo a{
     color: #cacaca;
     background-image: url(../img/d_btn.png);
-    background-color: #424242;
+    background-color: #141414;
     display:block;
     width: 230px;
     height: 60px;
@@ -240,12 +271,13 @@
     padding-left:100px;
     box-sizing: border-box;
     position: absolute;
-    top:37.5vw;
+    top:45vw;
     right:70vw;
 }
 /* ========第二區塊 RWD======== */
 @media screen and (min-width: 1600px) {
     .abouttwo a{
+        top: 40vw;
         right: 60vw;
     }
 }
@@ -254,6 +286,7 @@
         margin-bottom: calc(30vw + 10vh + 60px);
     }
     .abouttwo div{
+        border-bottom: 0;
         width: 80vw;
         height: 45vw;
         right:10vw;
@@ -261,19 +294,39 @@
     .abouttwo h2{
         width: 29vw;
         margin-left: 51vw;
-        font-size: 3.8vw;
+        /* font-size: 3.8vw;
         font-size: max(3.8vw, 18px);
-        line-height: max(4vw, 20px);
+        line-height: max(4vw, 20px); */
     }
     .abouttwo a{
         top:60vw;
         right:14vw;
-        font-size: min(4vw, 20px);
+        /* font-size: min(4vw, 20px); */
+    }
+}
+@media screen and (max-width: 575.98px) {
+    .abouttwo{
+        margin-bottom: calc(60vw + 10vh + 60px);
+    }
+    .abouttwo div{
+        width: 80vw;
+        height: 75vw;
+        right:10vw;
+    }
+    .abouttwo h2{
+        display: inline-block;
+        margin-left: 0;
+        width: 50%;
+        padding-top: 15vw;
+    }
+    .abouttwo a{
+        top:85vw;
+        right: 15vw;
     }
 }
 /* ======第二區塊a hover&RWD====== */
 .abouttwo a p{
-    background-color: #424242;
+    background-color: #141414;
     display: inline-block;
     width: 90px;
     padding:0 5px 0 15px;

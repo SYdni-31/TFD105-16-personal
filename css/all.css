@@ -413,6 +413,7 @@ h4{
     margin-top:60px;
     background-color: #141414;
     padding-top: 20px;
+    border-top: 1px solid #B69452;
 }
 .bottom h2{
     /* font-size:4vw;
@@ -678,7 +679,7 @@ h4{
         width: 80px;
     }
 }
-/* ========loadin page======== */
+/* ========loading page======== */
 .loadingblock{
     position: fixed;
     top: 0;
