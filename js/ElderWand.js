@@ -1,5 +1,5 @@
     // ========商品專頁滑動========
-    let endvw =document.body.offsetWidth*1.05;
+    let endvw =document.body.offsetWidth*1.3;
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(".wand1", { 
         rotation: 120,//最後旋轉程度deg
